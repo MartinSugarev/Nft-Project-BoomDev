@@ -10,7 +10,7 @@ export default function About() {
       <Grid container justifyContent="center">
         <Grid item>
           <Button variant="contained" component={Link} noLinkStyle href="/">
-            🏠 Home
+            https://gitlab.com/boomdotdev/projects/project-4
           </Button>
         </Grid>
       </Grid>
