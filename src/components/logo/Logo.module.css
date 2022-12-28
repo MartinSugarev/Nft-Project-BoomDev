@@ -1,7 +1,2 @@
-@import '../../styles/colors.scss';
-.logo-container {
-  display: block;
-  width: 20%;
-  max-width: 65px;
-}
+@use '../../styles/colors.scss';
 /*# sourceMappingURL=Logo.module.css.map */

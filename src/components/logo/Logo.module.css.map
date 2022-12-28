@@ -1,6 +1,6 @@
 {
     "version": 3,
-    "mappings": "AAAA,IAAI,CAAJ,0BAAI;AAEJ,AAAA,eAAe,CAAA;EACZ,OAAO,EAAE,KAAK;EACd,KAAK,EAAE,GAAG;EACV,SAAS,EAAE,IAAI;CACjB",
+    "mappings": "AAAA,IAAI,CAAJ,0BAAI",
     "sources": [
         "Logo.module.scss"
     ],

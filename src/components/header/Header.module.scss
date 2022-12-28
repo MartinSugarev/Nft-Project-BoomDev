@@ -1,0 +1,12 @@
+@import '../../styles/colors.scss';
+
+.header-container{
+  background-color: $background_paper;
+}
+.header-input{
+    background: $background_default;
+    color: $text_primary;
+}
+.header-magnifier-icon{
+    color: $text_primary;
+}
