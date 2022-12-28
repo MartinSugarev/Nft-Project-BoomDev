@@ -1,4 +1,4 @@
-import Logo from "../src/components/logo/logo";
+import Logo from "../src/components/Logo/Logo";
 
 export default function Index() {
   return <Logo />;
