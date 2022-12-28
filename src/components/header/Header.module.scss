@@ -1,12 +1,12 @@
-@use '../../styles/colors.scss' as *;
+@use '../../styles/colors.scss';
 
 .header-container{
-    background: $background_paper;
+    background: colors.$background_paper;
 }
 .header-input{
-    background: $background_default;
-    color: $text_primary;
+    background: colors.$background_default;
+    color: colors.$text_primary;
 }
 .header-magnifier-icon{
-    color: $text_primary;
+    color: colors.$text_primary;
 }
