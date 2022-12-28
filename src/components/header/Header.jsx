@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Header.module.css'
+import styles from './Header.module.scss'
 import { Grid, Container, TextField, Button } from '@mui/material';
 import Logo from '../logo/Logo';
 import SearchIcon from '@mui/icons-material/Search';
