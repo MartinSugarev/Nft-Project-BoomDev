@@ -1,7 +1,7 @@
 @use '../../styles/colors.scss';
 
 .header-container{
-  background-color: $background_paper;
+    background: $background_paper;
 }
 .header-input{
     background: $background_default;

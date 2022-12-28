@@ -11,7 +11,7 @@ export default function Header(){
     return (
        <Container maxWidth={false} className={classNames(styles['header-container'])}>
         <Grid container spacing={3} alignItems="center" justifyContent="space-between" >
-            <Grid item xs={'auto'}>
+            <Grid item xs='auto'>
                 <Logo type='default' />
             </Grid>
             <Grid item xs={'6'}>
@@ -27,10 +27,10 @@ export default function Header(){
                      )}}
                 />
             </Grid>
-            <Grid item xs={'auto'}>
+            <Grid item xs='auto'>
                  <Button variant="text">Home</Button>
                  <Button variant="text">Activity</Button>
-                 <Button variant="contained">EXPLORE</Button>
+                 <Button variant="contained">Explore</Button>
             </Grid>
         </Grid>
        </Container> 
