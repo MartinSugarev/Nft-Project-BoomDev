@@ -1,9 +1,8 @@
 {
     "version": 3,
-    "mappings": "AAEA,AAAA,iBAAiB,CAAA;EACb,UAAU,ECIK,OAAO;CDHzB;;AACD,AAAA,aAAa,CAAA;EACT,UAAU,ECAO,OAAO;EDCxB,KAAK,ECCM,OAAO;CDArB;;AACD,AAAA,sBAAsB,CAAA;EAClB,KAAK,ECFM,OAAO;CDGrB",
+    "mappings": "AAAA,IAAI,CAAJ,0BAAI;AAEJ,AAAA,iBAAiB,CAAA;EACb,UAAU,EAAE,gBAAgB;CAC/B;;AACD,AAAA,aAAa,CAAA;EACT,UAAU,EAAE,kBAAkB;EAC9B,KAAK,EAAE,YAAY;CACtB;;AACD,AAAA,sBAAsB,CAAA;EAClB,KAAK,EAAE,YAAY;CACtB",
     "sources": [
-        "Header.module.scss",
-        "../../styles/colors.scss"
+        "Header.module.scss"
     ],
     "names": [],
     "file": "Header.module.css"

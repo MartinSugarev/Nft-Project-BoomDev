@@ -1,13 +1,14 @@
+@use '../../styles/colors.scss';
 .header-container {
-  background: #181828;
+  background: background_paper;
 }
 
 .header-input {
-  background: #0c0c14;
-  color: #ffffff;
+  background: background_default;
+  color: text_primary;
 }
 
 .header-magnifier-icon {
-  color: #ffffff;
+  color: text_primary;
 }
 /*# sourceMappingURL=Header.module.css.map */
