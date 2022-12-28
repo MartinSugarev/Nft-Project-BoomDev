@@ -1,0 +1,28 @@
+@use '/src/styles/colors.scss';
+
+
+.avatar{
+    display: grid;
+    position: relative;    
+    place-items: center;
+    border-width: 3px;
+    overflow: hidden;
+    width: 90px;
+    height: 90px;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+        object-fit: contain;
+    }
+    
+    .badge{
+    position: absolute;
+    z-index: 999;
+    bottom: 0;
+    right: 0;
+    width: 25px;
+    height: 25px;
+    }
