@@ -1,0 +1,27 @@
+@use "../../styles/colors";
+
+
+.card{
+
+}
+
+.media{
+    object-fit: contain;
+}
+
+.likes{
+    border: 1.5px solid colors.$secondary_main;
+    background-color: colors.$success_main;
+    
+}
+
+.title{
+    color: colors.$text_primary;
+    font-weight: 900;
+    text-transform: uppercase;
+}
+.price{
+    color: colors.$secondary_main;
+    font-weight: 800;
+    text-transform: uppercase;
+}
