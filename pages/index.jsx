@@ -1,5 +1,5 @@
-import Avatar from "../src/components/avatar/Avatar";
+import User from "../src/components/user/User";
 
 export default function Index() {
-  return <Avatar />;
+  return <User />;
 }
