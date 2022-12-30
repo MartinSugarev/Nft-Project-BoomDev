@@ -9,6 +9,7 @@ import millify from "millify";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CircleIcon from '@mui/icons-material/Circle';
 import Countdown2 from '../countdown/Countdown'
+import Countdown  from 'react-countdown';
 
 
 export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft }) {
