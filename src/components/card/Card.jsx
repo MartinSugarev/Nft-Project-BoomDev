@@ -8,8 +8,8 @@ import PropTypes from 'prop-types';
 import millify from "millify";
 import FavoriteIcon from '@mui/icons-material/Favorite';
 import CircleIcon from '@mui/icons-material/Circle';
-import Countdown2 from '../countdown/Countdown'
-import Countdown  from 'react-countdown';
+import Countdown from '../countdown/Countdown'
+
 
 
 export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft }) {
@@ -36,7 +36,7 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
         alt="nft"
       />    
       {isLive && <Box className={classNames(styles['timer'])} >
-          <Countdown2 timeLeft={timeLeft}/>
+          <Countdown timeLeft={timeLeft}/>
       </Box>}
       {isLive && <Chip className={classNames(styles['badge'])} sx={{background: theme.palette.secondary.main, color: theme.palette.background.default}} icon={<CircleIcon />}  variant="outlined" label="live"/>}
      </CardContainer>     
