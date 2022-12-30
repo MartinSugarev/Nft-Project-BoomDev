@@ -11,7 +11,7 @@ import CircleIcon from '@mui/icons-material/Circle';
 import Countdown2 from '../countdown/Countdown'
 
 
-export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft }) {
+export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft = 10000 }) {
 
      const theme = useTheme()
      const [isLive, setIsLive] = useState(false)
@@ -21,6 +21,7 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
             setIsLive(() => true)
         }
      }, [])
+
 
     return (
         <CardContainer sx={{background:  isLive && 'rgba(36,242,94,0.08)'}} className={classNames(styles['card'])}>
