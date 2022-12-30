@@ -12,7 +12,7 @@ import Countdown from '../countdown/Countdown'
 
 
 
-export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft }) {
+export default function Card({name , likes = 0 ,mediaUrl, user, price, currency, timeLeft}) {
 
      const theme = useTheme()
      const [isLive, setIsLive] = useState(false)
