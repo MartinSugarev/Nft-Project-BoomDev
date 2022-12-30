@@ -2,7 +2,7 @@
 
 
 .card{
-
+    padding: .5rem;
 }
 
 .media{
@@ -15,13 +15,41 @@
     
 }
 
-.title{
+.title {
     color: colors.$text_primary;
     font-weight: 900;
-    text-transform: uppercase;
+    text-transform: capitalize;
+    line-height: .9;
 }
-.price{
+.price {
     color: colors.$secondary_main;
     font-weight: 800;
+    text-transform: capitalize;
+    line-height: .9;
+}
+.timer{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: .8rem;
+    text-align: center;
+    background-color: colors.$secondary_main;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: colors.$background_default
+}
+
+.badge{
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: colors.$secondary_main;
     text-transform: uppercase;
+    font-weight: 600;
+    
+
+}
+.live > *{
+    color: colors.$background_default;
 }
