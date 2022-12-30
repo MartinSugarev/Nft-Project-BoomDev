@@ -1,5 +1,5 @@
 import styles from './Countdown.module.scss'
-import Countdown  from 'react-countdown';
+import Countdown  from '../../../node_modules/react-countdown';
 
 export default function Countdown2({timeLeft}){
 
