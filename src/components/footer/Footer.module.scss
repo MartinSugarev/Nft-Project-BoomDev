@@ -1,0 +1,9 @@
+@use '../../styles/colors.scss';
+
+
+.footer-paragraph{
+    font-size: 14px;
+    font-weight: 300;
+    color: colors.$text_disabled;
+    text-align: center;
+}

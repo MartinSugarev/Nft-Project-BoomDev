@@ -4,51 +4,6 @@ import Card from '../card/Card';
 
 export default function Auctions({cards = []}) {
 
- 
-    //    const cards = [
-    //     {
-    //        "name":"Ivy",
-    //        "user":{
-    //         "avatar":"images/avatar.png",
-    //         "verified":true
-    //      },
-    //        "mediaUrl":"images/nft.jpg",
-    //        "price":1,
-    //        "currency":"ETH"
-    //     },
-    //     {
-    //        "name":"Judie",
-    //        "user":{
-    //         "avatar":"images/avatar.png",
-    //         "verified":true
-    //      },
-    //        "mediaUrl":"images/nft.jpg",
-    //        "price":2.3,
-    //        "currency":"ETH"
-    //     },
-    //     {
-    //        "name":"Juniper",
-    //        "user":{
-    //           "avatar":"images/avatar.png",
-    //           "verified":true
-    //        },
-    //        "mediaUrl":"images/nft.jpg",
-    //        "price":5,
-    //        "currency":"ETH"
-    //     },
-    //     {
-    //        "name":"Maple",
-    //        "user":{
-    //         "avatar":"images/avatar.png",
-    //         "verified":true
-    //      },
-    //        "mediaUrl":"images/nft.jpg",
-    //        "price":10,
-    //        "currency":"ETH"
-    //     }
-    //  ];
-
-
 
     return (
         <Container maxWidth={false}>

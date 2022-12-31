@@ -1,4 +1,3 @@
-import styles from './Trending.module.scss';
 import React from 'react';
 import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
 import Card from '../card/Card'
