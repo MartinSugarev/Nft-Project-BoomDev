@@ -11,15 +11,15 @@ export default function Footer() {
     const theme = useTheme()
 
     return (
-        <Container maxWidth={false} sx={{background: theme.palette.background.paper}}>
+        <Container maxWidth={false} className={classNames(styles['footer-container'])}>
             <Grid container justifyContent="space-around" alignItems="center"  >
                <Grid item xs={"auto"} >
                    <Logo type="muted" />
                </Grid>
                <Grid item xs={"auto"} >
-                   <Typography className={classNames(styles['footer-paragraph'])} variant="subtitle2">
+                   <p className={classNames(styles['footer-paragraph'])} variant="subtitle2">
                    Bum All Rights Reserved 2021
-                   </Typography>
+                   </p>
                </Grid>
                <Grid item xs={"auto"} >
                   <Button sx={{color: theme.palette.text.secondary, padding: 1}} size="small" variant="text">Privacy Policy</Button>
