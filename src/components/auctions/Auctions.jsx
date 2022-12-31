@@ -3,7 +3,7 @@ import React from 'react';
 import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
 import Card from '../card/Card';
 
-export default function Auctions() {
+export default function Auctions({cards}) {
     return (
         <Container maxWidth={false}>
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5vh'}}>
