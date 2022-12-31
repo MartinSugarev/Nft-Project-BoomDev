@@ -1,6 +1,5 @@
 import styles from './Footer.module.scss';
 import React from 'react';
-import { useTheme } from '@mui/material/styles';
 import {Container, Grid, Typography, Button} from '@mui/material';
 import Logo from '../logo/Logo';
 import classNames from "classnames";
@@ -8,8 +7,6 @@ import classNames from "classnames";
 
 export default function Footer() {
     
-    const theme = useTheme()
-
     return (
         <Container maxWidth={false} className={classNames(styles['footer-container'])}>
             <Grid container justifyContent="space-around" alignItems="center">
@@ -17,13 +14,13 @@ export default function Footer() {
                    <Logo type="muted" />
                </Grid>
                <Grid item xs="auto">
-                   <Typography className={classNames(styles['footer-paragraph'])} variant="subtitle2">
+                   <p className={classNames(styles['footer-paragraph'])}>
                    Bum All Rights Reserved 2021
-                   </Typography>
+                   </p>
                </Grid>
-               <Grid item  xs="auto" className={classNames(styles['footer-button'])}>
-                  <Button  size="small" variant="text">Privacy Policy</Button>
-                  <Button   size="small" variant="text">Cookie Policy</Button>
+               <Grid item xs="auto" className={classNames(styles['footer-button'])}>
+                  <Button size="small" variant="text">Privacy Policy</Button>
+                  <Button size="small" variant="text">Cookie Policy</Button>
                </Grid>
             </Grid>
         </Container>
