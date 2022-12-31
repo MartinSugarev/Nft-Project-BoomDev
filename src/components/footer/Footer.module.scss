@@ -11,3 +11,7 @@
 .footer-container{
     background: colors.$background_paper;
 }
+.footer-button > button{
+    color: colors.$text_hint;
+    padding: .5rem;
+}

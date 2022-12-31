@@ -21,13 +21,9 @@ export default function Footer() {
                    Bum All Rights Reserved 2021
                    </Typography>
                </Grid>
-               <Grid item container xs="auto">
-                   <Grid item>
-                   <Button sx={{color: theme.palette.text.secondary, padding: 1}} size="small" variant="text">Privacy Policy</Button>
-                   </Grid>
-                   <Grid item>
-                   <Button sx={{color: theme.palette.text.secondary, padding: 1}}  size="small" variant="text">Cookie Policy</Button>
-                   </Grid>     
+               <Grid item  xs="auto" className={classNames(styles['footer-button'])}>
+                  <Button  size="small" variant="text">Privacy Policy</Button>
+                  <Button   size="small" variant="text">Cookie Policy</Button>
                </Grid>
             </Grid>
         </Container>
