@@ -14,9 +14,9 @@ export default function Footer() {
                    <Logo type="muted" />
                </Grid>
                <Grid item xs="auto">
-                   <p className={classNames(styles['footer-paragraph'])}>
+                   <Typography className={classNames(styles['footer-paragraph'])} >
                    Bum All Rights Reserved 2021
-                   </p>
+                   </Typography>
                </Grid>
                <Grid item xs="auto" className={classNames(styles['footer-button'])}>
                   <Button size="small" variant="text">Privacy Policy</Button>

@@ -1,0 +1,24 @@
+@use "../../styles/colors.scss";
+
+
+
+.step-layout{
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.step-number{
+    background: rgba(24,24,40,0.9);
+}
+
+.step-number > h1{
+    font-size: 5rem;
+}
+
+.step-text{
+    background: colors.$background_paper;
+    padding: 2rem 3rem;
+}
+.step-text-second-child{
+    color: colors.$text_secondary;
+}

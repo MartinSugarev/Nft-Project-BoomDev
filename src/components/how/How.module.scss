@@ -1,0 +1,27 @@
+@use "../../styles/colors.scss";
+
+.how-layout{
+    height: 100vh;
+    display: grid;
+    place-content: center;
+}
+
+.how-text{
+    color: colors.$text_secondary;
+    font-size: .8rem;
+}
+.how-heading{
+   font-size: 3.5rem;
+   color: colors.$text_primary;
+   text-transform: uppercase;
+   font-weight: 700;
+}
+.how-grid-container{
+    background: colors.$primary_main;
+    height: 90%;
+}
+
+.how-grid-container  button {
+    background: colors.$text_primary;
+    color: colors.$primary_main;
+}
