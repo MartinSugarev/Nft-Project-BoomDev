@@ -6,7 +6,7 @@ import React from 'react'
 export default function Step({number, title, description}) {
     return (
         <Grid container className={classNames(styles['step-layout'])} m={0}>
-            <Grid item xs={3} sx={{display: 'flex', alignItems: 'center', justifyContent: 'center'}} className={classNames(styles['step-number'])}>
+            <Grid item xs={3} className={classNames(styles['step-number'])}>
             <Typography variant="h1" >
                   {number}
                </Typography>

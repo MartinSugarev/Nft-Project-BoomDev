@@ -1,19 +1,20 @@
 @use "../../styles/colors.scss";
 
-
-
 .step-layout{
     border-radius: 30px;
     overflow: hidden;
 }
 
 .step-number{
-    background-color: rgba((colors.$primary_main), 0.9);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(colors.$primary_main, 0.9);
 }
 
 .step-number > h1{
     font-size: 5rem;
-    background-color: rgba((colors.$primary_main), 0.9);
+    background-color: rgba(colors.$primary_main, 0.9);
 }
 
 .step-text{
