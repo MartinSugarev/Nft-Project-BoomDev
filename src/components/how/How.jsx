@@ -22,7 +22,7 @@ export default function How({description, title, items = [], link}) {
               <Grid item xs={5} container direction="row" spacing={2} sx={{position: 'relative', top: '-5%'}}>
                  {items.map((i, index) => {
                      <Grid item key={index}>
-                          <Step title={i.title} description={i.description} />
+                          <Step title={i.title} description={i.description} number={i.number}/>
                      </Grid>
                  })}
               </Grid>

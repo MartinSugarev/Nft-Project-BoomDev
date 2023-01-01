@@ -5,7 +5,6 @@ import React from 'react';
 import { useTheme } from '@mui/material/styles';
 
 export default function Step({number, title, description}) {
-    const theme = useTheme()
     return (
         <Grid container className={classNames(styles['step-layout'])} m={0}>
             <Grid item xs={3} className={classNames(styles['step-number'])}  >
