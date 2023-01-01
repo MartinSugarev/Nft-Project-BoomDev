@@ -2,7 +2,6 @@ import styles from './How.module.scss';
 import {Container, Grid, Typography, Button} from '@mui/material';
 import classNames from "classnames";
 import Step from './Step';
-
 import React from 'react'
 
 export default function How({description, title, items = [], link}) {
