@@ -7,9 +7,7 @@ export default function Step({number, title, description}) {
     return (
         <Grid container className={classNames(styles['step-layout'])} m={0}>
             <Grid item xs={3} className={classNames(styles['step-number'])}>
-            <Typography variant="h1" >
                   {number}
-               </Typography>
             </Grid>
             <Grid item xs={9} className={classNames(styles['step-text'])}>
                <Typography variant="h5" mb={1}>
