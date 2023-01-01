@@ -1,7 +1,7 @@
 import styles from './Step.module.scss';
 import { Grid, Typography} from '@mui/material';
 import classNames from "classnames";
-import React from 'react'
+import React from 'react';
 
 export default function Step({number, title, description}) {
     return (
