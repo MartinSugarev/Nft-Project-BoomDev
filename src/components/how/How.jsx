@@ -7,8 +7,7 @@ import React from 'react'
 
 export default function How({description, title, items = [], link}) {
     return (
-       <div className={classNames(styles['how-layout'])} >
-        <Container maxWidth={false} disableGutters>
+ 
             <Grid container direction="row" justifyContent="space-around" alignItems="center" className={classNames(styles['how-grid-container'])}>
               <Grid item >
                  <Typography mb={2} className={classNames(styles['how-heading'])} variant="h1">
@@ -27,7 +26,6 @@ export default function How({description, title, items = [], link}) {
                  })}
               </Grid>
             </Grid>
-        </Container>
-        </div> 
+
     )
 }
