@@ -1,4 +1,4 @@
-@use "../../styles/colors.scss";
+@use '../../styles/colors.scss';
 
 .step-layout{
     border-radius: 30px;
@@ -9,12 +9,11 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: rgba(colors.$primary_main, 0.9);
+    background: rgba(colors.$primary_main, 0.9);
 }
 
 .step-number > h1{
     font-size: 5rem;
-    background-color: rgba(colors.$primary_main, 0.9);
 }
 
 .step-text{
