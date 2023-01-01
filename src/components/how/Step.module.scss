@@ -9,11 +9,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: rgba((colors.$primary_main), 0.9);
+    background: rgba(colors.$primary_main, 0.9);
 }
 
 .step-number > h1{
     font-size: 5rem;
+    background: rgba(colors.$primary_main, 0.9);
 }
 
 .step-text{
