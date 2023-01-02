@@ -5,7 +5,7 @@ import React from 'react';
 import {images} from '../../data';
 import { useRouter } from 'next/router'
 
-export default function Feature() {
+export default function Feature({items = []}) {
     const router = useRouter()
 
     const handleImageClick = (route) => {
@@ -15,7 +15,7 @@ export default function Feature() {
     return (
         <Container >
             <ImageList cols={6} gap={8}>
-                 {images.map((i, index) => {
+                 {items.map((i, index) => {
                      const columns = index === 0 ? 3 : 1
                      const rows = index === 0 ? 2 : 1
                      return <ImageListItem key={index} cols={columns} rows={rows} >
