@@ -1,5 +1,5 @@
-import Featured from "../src/components/featured/Featured";
+import CollectorColumn from "../src/components/collectors/CollectorColumn";
 
 export default function Index() {
-  return <Featured />;
+  return <CollectorColumn />
 }

@@ -3,7 +3,7 @@ import classNames from "classnames";
 import React from 'react'
 import Avatar from '../avatar/Avatar'
 
-export default function User({name = 'Martin', info = '100 Points', avatar = '', size = 55, verified = false, }) {
+export default function User({name ='' , info = '', avatar = '', size = 55, verified = false, }) {
     return (
         <div className={classNames(styles['user'])}>
             <Avatar size={size} url={'/images/avatar.png'} verified={verified}/>
