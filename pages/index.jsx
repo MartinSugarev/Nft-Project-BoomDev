@@ -1,5 +1,5 @@
-import How from "../src/components/how/How";
+import Feature from "../src/components/feature/Feature";
 
 export default function Index() {
-  return <How />;
+  return <Feature />;
 }
