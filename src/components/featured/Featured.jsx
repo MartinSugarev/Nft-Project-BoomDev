@@ -1,11 +1,11 @@
-import styles from './Feature.module.scss';
+import styles from './Featured.module.scss';
 import {Container, ImageListItem, ImageList} from '@mui/material';
 import classNames from "classnames";
 import React from 'react';
 import {images} from '../../data';
 import { useRouter } from 'next/router'
 
-export default function Feature({items = []}) {
+export default function Featured({items = []}) {
     const router = useRouter()
 
     const handleImageClick = (route) => {
