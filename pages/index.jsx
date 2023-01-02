@@ -1,5 +1,5 @@
-import Feature from "../src/components/feature/Feature";
+import Featured from "../src/components/featured/Featured";
 
 export default function Index() {
-  return <Feature />;
+  return <Featured />;
 }
