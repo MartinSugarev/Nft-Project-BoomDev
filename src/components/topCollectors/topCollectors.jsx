@@ -4,7 +4,7 @@ import CollectorColumn from '../collectors/CollectorColumn';
 import lodash from 'lodash';
 
 
-export default function topCollectors({collectors = []}) {
+export default function TopCollectors({collectors = []}) {
 
     const [changedArr, setChangedArr] = useState([])
 

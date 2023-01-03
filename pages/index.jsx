@@ -1,5 +1,5 @@
-import CollectorColumn from "../src/components/topCollectors/topCollectors";
+import TopCollectors from "../src/components/topCollectors/TopCollectors";
 
 export default function Index() {
-  return <CollectorColumn />
+  return <TopCollectors />
 }
