@@ -2,9 +2,9 @@ import styles from './Collector.module.scss';
 import {Container, Grid} from '@mui/material';
 import classNames from "classnames";
 import React from 'react';
-import User from '../user/User'
+import User from '../user/User';
 
-export default function Collector({name, avatar, verified, type, nftsCount }) {
+export default function Collector({name, avatar, verified, type, nftsCount, number }) {
     return (
         <Container maxWidth={false}  className={classNames({
             [styles['container']]: true,
@@ -12,10 +12,10 @@ export default function Collector({name, avatar, verified, type, nftsCount }) {
         })}>
             <Grid container direction="row">
                <Grid item xs={3} className={classNames(styles['collector-number'])}>
-                   {nftsCount}
+                   {number}
                </Grid>
                <Grid item>
-                   <User name={name} avatar={avatar} verified={verified} />
+                   <User name={name} avatar={avatar} verified={verified} info={nftsCount} />
                </Grid>
             </Grid>
         </Container>

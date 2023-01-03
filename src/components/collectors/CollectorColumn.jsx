@@ -9,7 +9,7 @@ export default function CollectorColumn({items=[]}) {
         <Container maxWidth={false}>
            {items.map((i, index) => {
                const type = index % 2 !== 0 ? 'lighter' : 'dark'
-               return <Collector key={i.id} name={i.name} avatar={i.avatar}  verified={i.verified} nftsCount={i.nftsCount} type={type} />
+               return <Collector key={index} name={i.name} avatar={i.avatar}  verified={i.verified} nftsCount={i.nftsCount} type={type} number={i.id} />
            })}
         </Container>
     )

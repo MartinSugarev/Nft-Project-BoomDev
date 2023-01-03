@@ -1,4 +1,4 @@
-import CollectorColumn from "../src/components/collectors/CollectorColumn";
+import CollectorColumn from "../src/components/topCollectors/topCollectors";
 
 export default function Index() {
   return <CollectorColumn />
