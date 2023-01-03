@@ -8,7 +8,7 @@ export default function CollectorColumn({items=[]}) {
     return (
         <Container maxWidth={false}>
            {items.map((i, index) => {
-               const type = index % 2 !== 0 ? 'lighter' : 'dark'
+               const type = index % 2 !== 0 ? 'lighter' : 'darker'
                return <Collector key={index} name={i.name} avatar={i.avatar}  verified={i.verified} nftsCount={i.nftsCount} type={type} number={i.id} />
            })}
         </Container>

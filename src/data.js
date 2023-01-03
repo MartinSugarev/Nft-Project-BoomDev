@@ -44,3 +44,18 @@ export const images = [
       href: "/about",
     },
   ]
+
+  export const collectors = [
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10},
+    {name: 'Martin', avatar: '', verified: true, nftsCount: 10}
+  ]

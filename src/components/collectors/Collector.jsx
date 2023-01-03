@@ -6,7 +6,7 @@ import User from '../user/User';
 
 export default function Collector({name, avatar, verified, type, nftsCount, number }) {
     return (
-        <Container maxWidth={false}  className={classNames({
+        <Container maxWidth={false} disableGutters  className={classNames({
             [styles['container']]: true,
             [styles['container']]: type === 'lighter' ? true : false,
         })}>
