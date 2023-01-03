@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
-import CollectorColumn from '../collectors/CollectorColumn';
+import CollectorColumn from './CollectorColumn';
 import lodash from 'lodash';
 //import { collectors } from '../../data'
 
