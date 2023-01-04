@@ -13,7 +13,7 @@ import dataTrending from "../data/trending.json";
 import dataUsers from "../data/users.json";
 import dataNfts from "../data/nfts.json";
 import dataProfile from "../data/profile.json";
-import ProductInfoLikes from '../src/components/product/ProductInfoLikes';
+import ProductInfoCreator from '../src/components/product/ProductInfoCreator';
 
 export default function Index() {
  
@@ -43,6 +43,6 @@ useEffect(() => {
     //   <Auctions  cards={nfts}/>
     //   <Footer />
     // </>
-    <ProductInfoLikes  />
+    <ProductInfoCreator name={'Martin'} verified={true} avatar={''}  />
   )
 }

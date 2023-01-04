@@ -1,0 +1,21 @@
+@use '../../styles/colors.scss';
+
+.product-info-creator{
+    border-radius: 18px;
+}
+
+.title-container{
+    background: colors.$primary_main;
+    padding-left: 1.5rem;
+}
+.title{
+    color: colors.$text_secondary;
+    font-size: .7rem;
+    text-transform: uppercase;
+    line-height: 1;
+}
+.user-container{
+    background: colors.$background_paper;
+    padding: .8rem;
+    display: flex;
+}
