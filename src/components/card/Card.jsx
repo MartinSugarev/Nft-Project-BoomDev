@@ -38,7 +38,7 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
       {isLive && <Box className={classNames(styles['timer'])} >
           <Countdown timeLeft={timeLeft}/>
       </Box>}
-      {isLive && <Chip className={classNames(styles['badge'])} sx={{background: theme.palette.secondary.main, color: theme.palette.background.default}} icon={<CircleIcon />}  variant="outlined" label="live"/>}
+      {isLive && <Chip fontSize="small" className={classNames(styles['badge'])} sx={{background: theme.palette.secondary.main, color: theme.palette.background.default}} icon={<CircleIcon />}  variant="outlined" label="live"/>}
      </CardContainer>     
         <CardActions sx={{display: 'flex', justifyContent: 'space-between'}} >
         <Box>

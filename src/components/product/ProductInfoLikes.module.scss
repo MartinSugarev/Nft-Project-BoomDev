@@ -1,0 +1,9 @@
+@use '../../styles/colors.scss';
+
+.likes{
+ color: colors.$secondary_main;
+}
+
+.product-info-likes{
+    display: inline-block;
+}
