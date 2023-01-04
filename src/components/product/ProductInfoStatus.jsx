@@ -1,4 +1,4 @@
-import styles from './ProductInfoPrice.module.scss';
+import styles from './ProductInfoStatus.module.scss';
 import { Chip } from '@mui/material';
 import classNames from "classnames";
 import { useTheme } from '@mui/material/styles';
