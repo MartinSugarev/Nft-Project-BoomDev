@@ -13,6 +13,7 @@ import dataTrending from "../data/trending.json";
 import dataUsers from "../data/users.json";
 import dataNfts from "../data/nfts.json";
 import dataProfile from "../data/profile.json";
+import ProductInfoTitle from '../src/components/product/ProductInfoTitle';
 
 export default function Index() {
  
@@ -33,14 +34,15 @@ useEffect(() => {
 
 
   return (
-    <>
-      <Header />
-      <Featured  items={featuredCards}/>
-      <Trending cards={trending}/>
-      <TopCollectors collectors={users}/>
-      <How />
-      <Auctions  cards={nfts}/>
-      <Footer />
-    </>
+    // <>
+    //   <Header />
+    //   <Featured  items={featuredCards}/>
+    //   <Trending cards={trending}/>
+    //   <TopCollectors collectors={users}/>
+    //   <How />
+    //   <Auctions  cards={nfts}/>
+    //   <Footer />
+    // </>
+    < ProductInfoTitle text={"Hello"}/>
   )
 }
