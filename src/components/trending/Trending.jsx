@@ -58,7 +58,7 @@ export default function Trending({cards = []}) {
    //   ];
 
     return (
-        <Container maxWidth={false}>
+        <Container maxWidth={false} sx={{padding: '30px 0' }}>
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5vh'}}>
                <Typography variant="h2">
                    Trending
@@ -69,8 +69,10 @@ export default function Trending({cards = []}) {
             </Box>
          <Grid container spacing={1}>
              {cards.map((card, index) => {
+                 console.log(card);
+                 
                return  <Grid key={index} item xs={3}>
-                    <Card name={card.name} mediaUrl={card.mediaUrl} user={card.user} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  />
+                    <Card name={card.name} mediaUrl={card.mediaUrl} user={card} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  />
                  </Grid>
              })}
         </Grid> 

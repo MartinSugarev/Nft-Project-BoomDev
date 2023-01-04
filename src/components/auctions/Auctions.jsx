@@ -6,7 +6,7 @@ export default function Auctions({cards = []}) {
 
 
     return (
-        <Container maxWidth={false}>
+        <Container maxWidth={false} sx={{padding: '30px 0 40px' }}>
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5vh'}}>
                <Typography variant="h2">
                  🔥 Live Auctions
