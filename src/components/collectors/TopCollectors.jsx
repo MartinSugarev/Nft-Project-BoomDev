@@ -17,7 +17,7 @@ export default function TopCollectors({collectors = []}) {
      
 
     return (
-        <Container maxWidth={false}>
+        <Container maxWidth={false} >
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5vh'}}>
                <Typography variant="h2">
                    Top Collectors

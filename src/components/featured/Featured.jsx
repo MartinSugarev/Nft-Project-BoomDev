@@ -14,11 +14,9 @@ export default function Featured({items = []}) {
     }
 
     return (
-        <Container >
+        <Container maxWidth={false}>
             <ImageList cols={6} gap={8}>
                  {items.map((i, index) => {
-                     console.log(i['image']);
-                     
                      const columns = index === 0 ? 3 : 1
                      const rows = index === 0 ? 2 : 1
                      return <ImageListItem key={index} cols={columns} rows={rows} >
