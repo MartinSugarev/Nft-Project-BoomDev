@@ -4,7 +4,7 @@ import React from 'react';
 
 export default function ProductInfoTitle({text}) {
     return (
-        <div>
+        <div className={classNames(styles['product-info-title'])}>
             <Typography variant="h1" className={classNames(styles['title'])}>
                 {text}
             </Typography>
