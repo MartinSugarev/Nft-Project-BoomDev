@@ -1,0 +1,12 @@
+@use '../../styles/colors.scss';
+
+.product-info-price{
+ text-align: left;
+}
+
+.product-info-price > h6 {
+    color: colors.$text_hint;
+    font-size: .9rem;
+    text-transform: uppercase ;
+    font-weight: 400;
+}
