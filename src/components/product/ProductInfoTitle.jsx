@@ -1,0 +1,13 @@
+import styles from './ProductInfoTitle.module.scss';
+import { Typography } from '@mui/material';
+import React from 'react';
+
+export default function ProductInfoTitle({text}) {
+    return (
+        <div>
+            <Typography variant="h1" className={classNames(styles['title'])}>
+                {text}
+            </Typography>
+        </div>
+    )
+}
