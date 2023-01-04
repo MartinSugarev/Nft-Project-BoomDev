@@ -1,0 +1,11 @@
+@use '../../styles/colors.scss';
+
+.status{
+    background: colors.$secondary_main;
+    color: colors.$background_default;
+    text-transform: uppercase;
+    font-size: 1rem;
+}
+.product-info-status{
+    display: inline-block;
+}
