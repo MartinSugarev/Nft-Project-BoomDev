@@ -6,9 +6,7 @@ import Countdown from '../countdown/Countdown';
 
 export default function ProductInfoTimer({timeEnd, onTimeEnd}) {
     return (
-        <Container maxWidth={false} disableGutters className={classNames({
-            [styles['product-info-timer']]: true,
-            })}>
+        <div className={classNames(styles['product-info-timer'])}>
             <Grid container >
                <Grid item xs={12} className={classNames(styles['title-container'])}>
                    <Typography variant="h4" className={classNames(styles['title'])}>
@@ -22,7 +20,7 @@ export default function ProductInfoTimer({timeEnd, onTimeEnd}) {
                     <Countdown timeLeft={timeEnd} onTimeEnd={onTimeEnd}/>
                </Grid>}
             </Grid>
-            </Container>
+            </div>
     )
 }
 
