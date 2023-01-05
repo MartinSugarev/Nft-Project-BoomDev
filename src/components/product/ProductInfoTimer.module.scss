@@ -1,14 +1,14 @@
 @use '../../styles/colors.scss';
 
+.product-info-timer{
+    border-radius: 18px;
+    overflow: hidden;
+}
 .title{
     color: #000000;
     font-size: .7rem;
     text-transform: uppercase;
     text-align: center;
-}
-.product-info-timer{
-    border-radius: 18px;
-    overflow: hidden;
 }
 
 .active{
