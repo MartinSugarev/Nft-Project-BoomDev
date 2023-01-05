@@ -11,12 +11,16 @@
     overflow: hidden;
 }
 
+.active{
+    background-color: colors.$secondary_main;
+}
+
 .title-container{
     background-color: rgba(colors.$secondary_main, 90%);
 }
 
 .timer-container{
-    background-color: colors.$secondary_main;
+    
     color: #000000;
     text-align: center;
     font-size: 1.5rem;
