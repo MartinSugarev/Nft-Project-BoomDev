@@ -19,9 +19,9 @@ export default function ProductInfo({title, creator, price, currency, likes, onT
                      <ProductTitle text={title}/>
                  </Grid>
                  <Grid item xs={12}>
-                     <Stack direction="row" justifyContent="space-between">
+                     <Stack direction="row" justifyContent="space-between" className={classNames(styles['stats'])}>
                          <ProductInfoPrice  amount={price} currency={currency}/>
-                         <Stack direction="row" spacing={1}>
+                         <Stack direction="row" spacing={1} >
                            {isLive && <ProductInfoStatus />}
                            <ProductInfoLikes amount={likes} />
                          </Stack>
