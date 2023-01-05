@@ -16,9 +16,9 @@ export default function ProductInfoTimer({timeEnd, onTimeEnd}) {
                        ends in
                    </Typography>
                </Grid>
-               <Grid item xs={12} className={classNames(styles['timer-container'])}>
-                   {timeEnd && <Countdown timeLeft={timeEnd} onTimeEnd={onTimeEnd}/>}
-               </Grid>
+               {timeEnd && <Grid item xs={12} className={classNames(styles['timer-container'])}>
+                    <Countdown timeLeft={timeEnd} onTimeEnd={onTimeEnd}/>
+               </Grid>}
             </Grid>
             </Container>
     )
