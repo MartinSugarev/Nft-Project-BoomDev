@@ -43,6 +43,6 @@ useEffect(() => {
     //   <Auctions  cards={nfts}/>
     //   <Footer />
     // </>
-    <ProductInfoTimer timeEnd={100000} />
+    <ProductInfoTimer  />
   )
 }
