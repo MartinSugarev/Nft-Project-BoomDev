@@ -32,10 +32,10 @@ export default function ProductTabs({text, bids = []}) {
               <TableContainer>
                   <Table>
                   <TableBody>
-          {bids.map((row, index) => {
-              const isLighter = index % 2 !== 0 ? true : false;
-          return  <TableRow key={index} sx={{'&:last-child td, &:last-child th': { border: 0 }}} className={classNames({
-            [styles[`table-row-${index}`]]: true,
+          {bids.map((row, i) => {
+              const isLighter = i % 2 !== 0 ? true : false;              
+          return  <TableRow key={i} sx={{'&:last-child td, &:last-child th': { border: 0 }}} className={classNames({
+            [styles[`table-row-${i}`]]: true,
             [styles['active']]:  isLighter ? true : false
          })}>
               <TableCell sx={{display: 'flex', justifyContent: 'flex-start'}} align="left"> <User name={row.user.name} avatar={row.user.avatar} verified={row.user.verified}/></TableCell>
