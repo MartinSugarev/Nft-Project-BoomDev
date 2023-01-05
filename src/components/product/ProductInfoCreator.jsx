@@ -6,8 +6,7 @@ import User from '../user/User'
 
 export default function ProductInfoCreator({name, avatar, verified = false}) {
     return (
-        <Box component="div"  className={classNames(styles['product-info-creator'])}>
-            <Grid container >
+            <Grid container className={classNames(styles['product-info-creator'])}>
                <Grid item xs={12} className={classNames(styles['title-container'])}>
                    <Typography variant="h4" className={classNames(styles['title'])}>
                        creator
@@ -17,6 +16,5 @@ export default function ProductInfoCreator({name, avatar, verified = false}) {
                    <User name={name} avatar={avatar} verified={verified} />
                </Grid>
             </Grid>
-        </Box>
     )
 }
