@@ -7,13 +7,7 @@ import User from '../user/User';
 import {parseISO, formatDistance} from 'date-fns';
 import { useTheme } from '@mui/material/styles';
 
-export default function ProductTabs({text, bids = [
-    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'}
-
-]}) {
+export default function ProductTabs({text, bids}) {
 
     const [value, setValue] = useState('1');
     const theme = useTheme()
@@ -38,7 +32,7 @@ export default function ProductTabs({text, bids = [
               <TableContainer>
                   <Table>
                   <TableBody>
-          {bids.map((row, i) => {
+          {bids?.map((row, i) => {
               const isLighter = i % 2 !== 0 ? true : false;              
           return  <TableRow key={i} sx={{'&:last-child td, &:last-child th': { border: 0 }}} className={classNames({
             [styles[`table-row-${i}`]]: true,
