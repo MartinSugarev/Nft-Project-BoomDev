@@ -32,7 +32,7 @@ export default function ProductTabs({text, bids}) {
               <TableContainer>
                   <Table>
                   <TableBody>
-          {bids?.map((row, i) => {
+          {bids ? bids?.map((row, i) => {
               const isLighter = i % 2 !== 0 ? true : false;              
           return  <TableRow key={i} sx={{'&:last-child td, &:last-child th': { border: 0 }}} className={classNames({
             [styles[`table-row-${i}`]]: true,
@@ -42,7 +42,7 @@ export default function ProductTabs({text, bids}) {
               <TableCell align="right" sx={{color: theme.palette.secondary.main}}>{row.amount}</TableCell>
               <TableCell align="right">{formatDistance(parseISO(row.date),new Date(), { addSuffix: true })}</TableCell>
             </TableRow>
-               })}
+               }) : <TableRow className={classNames(styles[`table-row-0`])}></TableRow>}
                    </TableBody>
                   </Table>
               </TableContainer>
