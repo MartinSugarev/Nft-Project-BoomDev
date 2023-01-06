@@ -14,9 +14,6 @@
     text-transform: uppercase;
     color: colors.$text_secondary;
 }
-.active{
-    background-color: rgba(colors.$primary_main, 15%);
-}
 
 .product-tabs{
     display: block;
@@ -24,6 +21,9 @@
 
 @for $i from 0 through 20 {
     .table-row-#{$i}{
-       display: block;
+        background-color: colors.$background_paper;
     }
-  }
+}
+.active{
+ background-color: rgba(colors.$primary_main, 15%);
+}
