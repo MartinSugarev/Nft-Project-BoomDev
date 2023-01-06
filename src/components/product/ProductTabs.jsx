@@ -34,10 +34,10 @@ export default function ProductTabs({text, bids = []}) {
                   <TableBody>
           {bids.map((row, i) => {
               const isLighter = i % 2 !== 0 ? true : false;              
-          return  <TableRow key={i} sx={{'&:last-child td, &:last-child th': { border: 0 }}} className={classNames({
+          return  <TableRow key={i} className={classNames({
             [styles[`table-row-${i}`]]: true,
             [styles['active']]:  isLighter ? true : false
-         })}>
+         })} sx={{'&:last-child td, &:last-child th': { border: 0 }}}>
               <TableCell sx={{display: 'flex', justifyContent: 'flex-start'}} align="left"> <User name={row.user.name} avatar={row.user.avatar} verified={row.user.verified}/></TableCell>
               <TableCell align="right" sx={{color: theme.palette.secondary.main}}>{row.amount}</TableCell>
               <TableCell align="right">{formatDistance(parseISO(row.date),new Date(), { addSuffix: true })}</TableCell>
