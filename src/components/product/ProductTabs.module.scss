@@ -20,7 +20,7 @@
 }
 
 
-@for $i from 0 through 11 {
+@for $i from 0 through 20 {
     .table-row-#{$i}{
         background-color: colors.$background_paper;
     }
