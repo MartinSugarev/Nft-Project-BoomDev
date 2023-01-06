@@ -19,11 +19,13 @@
     display: block;
 }
 
-@for $i from 0 through 20 {
-    .table-row-#{$i}{
-        background-color: colors.$background_paper;
-    }
-}
+// @for $i from 0 through 11 {
+//     .table-row-#{$i}{
+//         background-color: colors.$background_paper;
+//     }
+// }
+
+
 
 .active{
  background-color: rgba(colors.$primary_main, 15%);
