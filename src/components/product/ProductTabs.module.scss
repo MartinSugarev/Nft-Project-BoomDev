@@ -22,7 +22,7 @@
     display: block;
 }
 
-@for $i from 1 through 20 {
+@for $i from 0 through 20 {
     .table-row-#{$i}{
        display: block;
     }
