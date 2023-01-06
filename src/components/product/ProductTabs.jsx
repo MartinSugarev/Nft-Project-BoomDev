@@ -35,8 +35,8 @@ export default function ProductTabs({text, bids}) {
           {bids?.map((row, i) => {
               const isLighter = i % 2 !== 0 ? true : false;              
           return  <TableRow key={i} className={classNames({
-            [styles[`table-row-0`]]: true,
-            [styles['active']]:  isLighter ? true : false
+            [styles[`table-row-${i}`]]: true,
+           // [styles['active']]:  isLighter ? true : false
          })}>
               <TableCell sx={{display: 'flex', justifyContent: 'flex-start'}} align="left"> <User name={row.user.name} avatar={row.user.avatar} verified={row.user.verified}/></TableCell>
               <TableCell align="right" sx={{color: theme.palette.secondary.main}}>{row.amount}</TableCell>
