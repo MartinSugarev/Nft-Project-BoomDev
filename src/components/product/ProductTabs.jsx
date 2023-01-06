@@ -7,7 +7,13 @@ import User from '../user/User';
 import {parseISO, formatDistance} from 'date-fns';
 import { useTheme } from '@mui/material/styles';
 
-export default function ProductTabs({text, bids = []}) {
+export default function ProductTabs({text, bids = [
+    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 20, date: '2012-12-12'}
+
+]}) {
 
     const [value, setValue] = useState('1');
     const theme = useTheme()
@@ -31,19 +37,19 @@ export default function ProductTabs({text, bids = []}) {
           <TabPanel value="2">
               <TableContainer>
                   <Table>
-                  <TableBody>
+  
           {bids.map((row, i) => {
               const isLighter = i % 2 !== 0 ? true : false;              
-          return  <TableRow key={i} className={classNames({
+          return  <TableRow key={i} sx={{'&:last-child td, &:last-child th': { border: 0 }}} className={classNames({
             [styles[`table-row-${i}`]]: true,
             [styles['active']]:  isLighter ? true : false
-         })} sx={{'&:last-child td, &:last-child th': { border: 0 }}}>
+         })}>
               <TableCell sx={{display: 'flex', justifyContent: 'flex-start'}} align="left"> <User name={row.user.name} avatar={row.user.avatar} verified={row.user.verified}/></TableCell>
               <TableCell align="right" sx={{color: theme.palette.secondary.main}}>{row.amount}</TableCell>
               <TableCell align="right">{formatDistance(parseISO(row.date),new Date(), { addSuffix: true })}</TableCell>
             </TableRow>
                })}
-                   </TableBody>
+           
                   </Table>
               </TableContainer>
           </TabPanel>
