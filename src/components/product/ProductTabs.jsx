@@ -37,7 +37,7 @@ export default function ProductTabs({text, bids = [
           <TabPanel value="2">
               <TableContainer>
                   <Table>
-  
+                  <TableBody>
           {bids.map((row, i) => {
               const isLighter = i % 2 !== 0 ? true : false;              
           return  <TableRow key={i} sx={{'&:last-child td, &:last-child th': { border: 0 }}} className={classNames({
@@ -49,7 +49,7 @@ export default function ProductTabs({text, bids = [
               <TableCell align="right">{formatDistance(parseISO(row.date),new Date(), { addSuffix: true })}</TableCell>
             </TableRow>
                })}
-           
+                   </TableBody>
                   </Table>
               </TableContainer>
           </TabPanel>
