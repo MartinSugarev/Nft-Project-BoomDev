@@ -32,16 +32,16 @@ export default function ProductTabs({text, bids }) {
               <TableContainer>
                   <Table>
                   <TableBody>
-          {/* {bids?.map((row, i) => (             
+          {bids?.map((row, i) => (             
             <TableRow key={i} className={classNames({
-            [styles[`table-row-${i}`]]: true,
+            [styles[`table-row-i`]]: true,
             [styles['active']]:  i % 2 !== 0 ? true : false
          })}>
               <TableCell sx={{display: 'flex', justifyContent: 'flex-start'}} align="left"> <User name={row.user.name} avatar={row.user.avatar} verified={row.user.verified}/></TableCell>
               <TableCell align="right" sx={{color: theme.palette.secondary.main}}>{row.amount}</TableCell>
               <TableCell align="right">{formatDistance(parseISO(row.date),new Date(), { addSuffix: true })}</TableCell>
             </TableRow>
-          ))} */}
+          ))}
                    </TableBody>
                   </Table>
               </TableContainer>
