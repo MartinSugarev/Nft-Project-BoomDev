@@ -7,7 +7,22 @@ import User from '../user/User';
 import {parseISO, formatDistance} from 'date-fns';
 import { useTheme } from '@mui/material/styles';
 
-export default function ProductTabs({text, bids }) {
+export default function ProductTabs({text, bids = [
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
+    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'}
+]}) {
 
     const [value, setValue] = useState('1');
     const theme = useTheme()
@@ -30,11 +45,9 @@ export default function ProductTabs({text, bids }) {
           </TabPanel>
           <TabPanel value="2">
               <TableContainer>
-                  <Table>
-                  <TableBody>
           {bids?.map((row, i) => (             
             <TableRow key={i} className={classNames({
-            [styles[`table-row-i`]]: true,
+            [styles[`table-row-${i}`]]: true,
             [styles['active']]:  i % 2 !== 0 ? true : false
          })}>
               <TableCell sx={{display: 'flex', justifyContent: 'flex-start'}} align="left"> <User name={row.user.name} avatar={row.user.avatar} verified={row.user.verified}/></TableCell>
@@ -42,8 +55,6 @@ export default function ProductTabs({text, bids }) {
               <TableCell align="right">{formatDistance(parseISO(row.date),new Date(), { addSuffix: true })}</TableCell>
             </TableRow>
           ))}
-                   </TableBody>
-                  </Table>
               </TableContainer>
           </TabPanel>
         </TabContext>    
