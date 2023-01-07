@@ -1,5 +1,5 @@
 import styles from './ProductTabs.module.scss';
-import { TableBody, Box, TableCell, Tab, Tabs, TableContainer, TableRow, Table} from '@mui/material';
+import { TableBody, Box, TableCell, Tab, Tabs, TableContainer, TableRow, Table, TableHead} from '@mui/material';
 import classNames from "classnames";
 import {TabPanel, TabList, TabContext } from '@mui/lab'
 import React, {useState} from 'react';
@@ -7,22 +7,7 @@ import User from '../user/User';
 import {parseISO, formatDistance} from 'date-fns';
 import { useTheme } from '@mui/material/styles';
 
-export default function ProductTabs({text, bids = [
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'},
-    {name: 'Martin', user: {}, amount: 12, date: '2012-12-12'}
-]}) {
+export default function ProductTabs({text, bids}) {
 
     const [value, setValue] = useState('1');
     const theme = useTheme()
@@ -46,7 +31,7 @@ export default function ProductTabs({text, bids = [
           <TabPanel value="2">
               <TableContainer>
                   <Table>
-                  <TableBody>
+                  <TableHead>
           {bids?.map((row, i) => (             
             <TableRow key={i} className={{
             [styles[`table-row-${i}`]]: true,
@@ -57,7 +42,7 @@ export default function ProductTabs({text, bids = [
               <TableCell align="right">{formatDistance(parseISO(row.date),new Date(), { addSuffix: true })}</TableCell>
             </TableRow>
           ))}
-                   </TableBody>
+                   </TableHead>
                   </Table>
               </TableContainer>
           </TabPanel>
