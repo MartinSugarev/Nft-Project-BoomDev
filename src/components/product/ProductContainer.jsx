@@ -1,17 +1,10 @@
 import styles from './ProductContainer.module.scss';
-import { Grid, Box, Button, Container} from '@mui/material';
+import { Grid, Box, Container} from '@mui/material';
 import classNames from "classnames";
-import { useTheme } from '@mui/material/styles';
 import React from 'react';
 import ProductImage from './ProductImage';
 import ProductActions from './ProductActions';
 import ProductInfo from './ProductInfo';
-import ProductInfoCreator from './ProductInfoCreator';
-import ProductInfoLikes from './ProductInfoLikes';
-import ProductInfoPrice from './ProductInfoPrice';
-import ProductInfoStatus from './ProductInfoStatus';
-import ProductInfoTimer from './ProductInfoTimer';
-import ProductInfoTitle from './ProductInfoTitle';
 import ProductTabs from './ProductTabs';
 
 
@@ -20,7 +13,7 @@ export default function ProductContainer({name, owner, price, currency, likes,au
         <div className={classNames(styles["product-container"])}>
             <Grid container spacing={6}>
                 <Grid item xs={6}>
-                   <ProductImage text={source?.url}/>
+                   <ProductImage url={source?.url}/>
                 </Grid>
                 <Grid item xs={5}>
                 <ProductInfo
