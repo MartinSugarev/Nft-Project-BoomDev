@@ -1,10 +1,10 @@
 import React from "react";
-import Footer from "../../src/components/footer/Footer";
-import Header from "../../src/components/header/Header";
-import ProductContainer from "../../src/components/product/ProductContainer";
+import Footer from "../../../src/components/footer/Footer";
+import Header from "../../../src/components/header/Header";
+import ProductContainer from "../../../src/components/product/ProductContainer";
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
-import nftsInfo from '../../data/nfts.json'
+import nftsInfo from '../../../data/nfts.json'
 
 export default function Product() {
   const router = useRouter();
