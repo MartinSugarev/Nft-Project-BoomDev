@@ -1,0 +1,16 @@
+@use '../../styles/colors.scss';
+
+
+ .button:nth-child(1){
+  background: colors.$primary_main;
+  color: colors.$text_primary;
+}
+
+ .button:nth-child(2){
+    border-color: colors.$secondary_main;
+    color: colors.$secondary_main;
+  }
+
+ .product-actions{
+     display: block;
+ } 

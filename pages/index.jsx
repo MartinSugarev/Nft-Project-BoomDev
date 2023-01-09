@@ -1,10 +1,10 @@
 import React from 'react'
-import ProductTabs from '../src/components/product/ProductTabs';
+import ProductActions from '../src/components/product/ProductActions';
 
 export default function Index() {
  
 
   return (
-    <ProductTabs  />
+    <ProductActions  />
   )
 }
