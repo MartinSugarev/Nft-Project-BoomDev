@@ -24,7 +24,7 @@ export default function Index() {
     setFeaturedCards(dataTrending);
     setTrendingItems(dataFeatured);
     setNfts(dataNfts);
-
+    setCollectors(dataUsers)
   }, []);
 
   return (
