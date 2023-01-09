@@ -1,10 +1,9 @@
 import React from 'react'
-import ProductActions from '../src/components/product/ProductActions';
+import ProductContainer from '../src/components/product/ProductContainer';
 
 export default function Index() {
- 
 
   return (
-    <ProductActions  />
+    <ProductContainer  />
   )
 }

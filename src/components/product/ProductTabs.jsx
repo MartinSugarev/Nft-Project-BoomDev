@@ -7,12 +7,7 @@ import User from '../user/User';
 import {parseISO, formatDistance} from 'date-fns';
 import { useTheme } from '@mui/material/styles';
 
-export default function ProductTabs({text, bids = [
-    {name: 'Martin', user: {}, amount: 20, date: '2022-12-12'},
-    {name: 'Martin', user: {}, amount: 20, date: '2022-12-12'},
-    {name: 'Martin', user: {}, amount: 20, date: '2022-12-12'},{name: 'Martin', user: {}, amount: 20, date: '2022-12-12'},
-    {name: 'Martin', user: {}, amount: 20, date: '2022-12-12'}
-]}) {
+export default function ProductTabs({text, bids =[]}) {
 
     const [value, setValue] = useState('1');
     const theme = useTheme()
