@@ -12,12 +12,12 @@ export default function ProductActions({isLive, currency, buyAmount, bidAmount, 
         <Box component="div" className={classNames(styles['product-actions'])}>
            <Grid container spacing={2}>
               <Grid item xs={7}>
-                 <Button fullWidth={true} disabled={isLive} onClick={onBuy} type="contained" className={classNames(styles['button'])}>
+                 <Button fullWidth={true} disabled={isLive ? true : false} onClick={onBuy} type="contained" className='button'>
                       {`Buy amount ${buyAmount} ${currency}`}
                  </Button>
               </Grid>
               <Grid item xs={5}>
-                 <Button fullWidth={true} disabled={isLive} onClick={onBid} type="outlined" className={classNames(styles['button'])} style={{background: theme.palette.background.default, color: theme.palette.secondary.main, border: `2px solid ${theme.palette.secondary.main}`}}>
+                 <Button fullWidth={true} disabled={isLive ? true : false} onClick={onBid} type="outlined" color="success" className='button' style={{ border: `2px solid ${theme.palette.secondary.main}`}}>
                     {`Place bid for ${bidAmount} ${currency}`}
                  </Button>
               </Grid>
