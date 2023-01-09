@@ -17,7 +17,7 @@ import ProductTabs from './ProductTabs';
 
 export default function ProductContainer({name, owner, price, currency, likes,auction_end, details, source, bids}) {
     return (
-        <Container maxWidth={false} className={classNames(styles["product-container"])}>
+        <div className={classNames(styles["product-container"])}>
             <Grid container spacing={6}>
                 <Grid item xs={6}>
                    <ProductImage text={source?.url}/>
@@ -44,37 +44,7 @@ export default function ProductContainer({name, owner, price, currency, likes,au
           />
                </Grid>
             </Grid>
-        </Container>
+        </div>
     )
 }
 
-// {
-//     "name": String,
-//     "owner":{
-//        "username": String,
-//        "verified": Boolean,
-//        "avatar":{
-//           "url": String
-//        }
-//     },
-//     "price": Number,
-//     "currency": String,
-//     "likes": Number,
-//     "auction_end": String,
-//     "details": String,
-//     "source":{
-//        "url": String
-//     },
-//     "bids":[
-//        {
-//           "user":{
-//              "info": Number,
-//              "name": String,
-//              "verified": Boolean,
-//              "avatar": String
-//           },
-//           "date": String,
-//           "amount": Number
-//        }
-//     ]
-//     }
