@@ -10,7 +10,7 @@ import ProductTabs from './ProductTabs';
 
 export default function ProductContainer({name, owner, price, currency, likes,auction_end, details, source, bids}) {
     return (
-        <div className={classNames(styles["product-container"])}>
+        <Container maxWidth={false} className={classNames(styles["product-container"])}>
             <Grid container spacing={6}>
                 <Grid item xs={6}>
                    <ProductImage url={source?.url}/>
@@ -37,7 +37,7 @@ export default function ProductContainer({name, owner, price, currency, likes,au
           />
                </Grid>
             </Grid>
-        </div>
+        </Container>
     )
 }
 

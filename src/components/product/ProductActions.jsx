@@ -6,7 +6,6 @@ import React from 'react'
 
 export default function ProductActions({isLive, currency, buyAmount, bidAmount, onBuy, onBid}) {
     
-    const theme = useTheme()
 
     return (
         <Box component="div" className={classNames(styles['product-actions'])}>
