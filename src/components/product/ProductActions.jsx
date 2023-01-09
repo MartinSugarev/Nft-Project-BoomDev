@@ -13,7 +13,7 @@ export default function ProductActions({isLive, currency, buyAmount, bidAmount, 
            <Grid container spacing={2}>
               <Grid item xs={7}>
                  <Button fullWidth={true} disabled={isLive} onClick={onBuy} type="contained" className={classNames(styles['button'])}>
-                      {`Buy amount ${butAmount} ${currency}`}
+                      {`Buy amount ${buyAmount} ${currency}`}
                  </Button>
               </Grid>
               <Grid item xs={5}>
