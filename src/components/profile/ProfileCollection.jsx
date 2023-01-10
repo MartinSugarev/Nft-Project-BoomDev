@@ -5,7 +5,7 @@ import React from 'react';
 import ProfileCollectionFilters from './ProfileCollectionFilters';
 import Card from '../card/Card';
 
-export default function ProfileCollection({user, filter, items = []}) {
+export default function ProfileCollection({user, filters, items = []}) {
     return (
         <div className={classNames(styles['profile-collection'])}>
         <Container maxWidth={false} >
@@ -16,7 +16,7 @@ export default function ProfileCollection({user, filter, items = []}) {
                    </Typography>
                </Grid>
                <Grid item xs={9}>
-                   <ProfileCollectionFilters filters={filter} />
+                   <ProfileCollectionFilters filters={filters} />
                </Grid>
                <Grid xs={12}>
                    {items.map((item, index) => {
