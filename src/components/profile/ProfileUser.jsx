@@ -10,10 +10,10 @@ export default function ProfileUser({name, avatar, verified, info}) {
         <div className={classNames(styles['profile-user'])}>
             <Avatar url={avatar} verified={verified} />
             <Typography variant="h3">
-                dadadada
+                {name}
             </Typography>
             <Typography variant="body1" sx={{maxWidth: '450px', textAlign: 'center'}}>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nostrum delectus eius quas numquam voluptatum. Sequi minima veritatis suscipit? Minus beatae illo corporis esse nemo autem id, animi possimus totam vitae quos assumenda cum nam nesciunt quis et cumque quasi numquam!
+                {info}
             </Typography>
         </div>
     )
