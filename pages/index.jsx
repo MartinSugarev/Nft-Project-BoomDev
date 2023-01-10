@@ -7,7 +7,7 @@ import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
 
-import ProfileCollectionFilters from '../src/components/profile/ProfileCollectionFilters'
+import ProfileCollection from '../src/components/profile/ProfileCollection'
 
 import dataFeatured from "../data/featured.json";
 import dataTrending from "../data/trending.json";
@@ -38,7 +38,7 @@ export default function Index() {
       <How />
       <Auctions cards={auctions}/>
       <Footer /> */}
-      <ProfileCollectionFilters />
+      <ProfileCollection />
     </>
   );
 }
