@@ -9,7 +9,7 @@ export default function ProfileCollection({user, filters, items = []}) {
     return (
         <div className={classNames(styles['profile-collection'])}>
         <Container maxWidth={false} >
-            <Grid container>
+            <Grid container spacing={2}>
                <Grid item xs={3}>
                    <Typography variant="h3">
                        Collection
