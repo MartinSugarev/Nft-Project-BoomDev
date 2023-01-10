@@ -1,8 +1,15 @@
+@use '../../styles/colors.scss';
+
 .text{
     text-align: center;
     text-transform: uppercase;
+    position: relative;
+    transform: translateY(50%);
 }
 
 .hero{
     display: block;
+    height: 30vh;
+    background: colors.$primary_main;
+    width: 100%;
 }

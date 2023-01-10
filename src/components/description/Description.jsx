@@ -6,7 +6,7 @@ import React from "react";
 export default function Description({ text, image }) {
   return (
     <div className={classNames(styles['description'])}>
-      <Typography variant="body1" className={classNames(styles['text'])}>
+      <Typography variant="body1" sx={{ wordBreak: "break-word" }} className={classNames(styles['text'])}>
         {text}
       </Typography>
       <img src={image} className={classNames(styles['image'])} alt="description-image"/>
