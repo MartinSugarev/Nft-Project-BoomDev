@@ -1,0 +1,10 @@
+@use '../../styles/colors.scss';
+
+.profile-user{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    color: colors.$text_secondary;
+}

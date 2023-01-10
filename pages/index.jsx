@@ -6,7 +6,8 @@ import TopCollectors from "../src/components/collectors/TopCollectors";
 import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
-import Hero from '../src/components/hero/Hero'
+
+import ProfileUser from '../src/components/profile/ProfileUser'
 
 import dataFeatured from "../data/featured.json";
 import dataTrending from "../data/trending.json";
@@ -37,7 +38,7 @@ export default function Index() {
       <How />
       <Auctions cards={auctions}/>
       <Footer /> */}
-      <Hero text={'Component text'}/>
+      <ProfileUser />
     </>
   );
 }
