@@ -10,8 +10,12 @@ export default function index() {
     return (
         <Box component="div" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
           <Header />
-          <Hero text={'Component Hero'}/>
-          <Description text={'kjkjskdjlaksjdkajdalkdjaljdajdkjskjkjksjkjdkjaskdjakdjkajdkajsdkdjakljskjkajdkjnnvjhdkjfhdbvhfbhjvbjvbfhkjkjdklasjdajdalkjdkajdlakjdkasdjalskjdalkjdakjdaldlajdla'}/>
+          <Hero text="How it works"/>
+          <Description text="Lorem ipsum odor amet, consectetuer adipiscing elit. Ac purus in massa egestas mollis varius;
+    dignissim elementum. Mollis tincidunt mattis hendrerit dolor eros enim, nisi ligula ornare.
+    Hendrerit parturient habitant pharetra rutrum gravida porttitor eros feugiat. Mollis elit
+    sodales taciti duis praesent id. Consequat urna vitae morbi nunc congue."
+      />
           <Footer />
         </Box>
     )
