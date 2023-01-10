@@ -1,4 +1,4 @@
-import styles from "./ProfileCollectionFilters.module.scss";
+import styles from "./ProfileCollection.module.scss";
 import classNames from "classnames";
 import {Typography, Container, Grid} from '@mui/material';
 import React from 'react';
