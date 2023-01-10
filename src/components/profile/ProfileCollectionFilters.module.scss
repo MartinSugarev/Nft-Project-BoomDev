@@ -1,0 +1,14 @@
+@use '../../styles/colors.scss';
+
+.profile-input{
+    background: colors.$background_paper;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.profile-input:focus{
+    outline: none;
+}
+.profile-input:hover{
+    outline: none;
+}
