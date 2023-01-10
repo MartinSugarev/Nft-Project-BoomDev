@@ -14,8 +14,8 @@ export default function ProfileCollectionFilters({filters}) {
     }
 
     return (
-        <Container maxWidth={false}>
-            <Stack direction="row" justifyContent="flex-end" spacing={1} >
+        <Container maxWidth={false}  className={classNames(styles['profile-collection-filters'])}>
+            <Stack direction="row" justifyContent="flex-end" alignItems="center" spacing={1} >
             <FormControl fullWidth>
             <InputLabel id="select-label">Sort by</InputLabel>
             <Select
@@ -39,12 +39,13 @@ export default function ProfileCollectionFilters({filters}) {
               </Select>
               </FormControl>
                  <TextField
-                 className={classNames(styles['profile-input'])}             
+                 className={classNames(styles['profile-input'])}      
                  focused={false}
-                 size="medium"
                  fullWidth={true}
+                 size="large"
+                 variant="standard"
                  InputProps={{
-                 startAdornment: <InputAdornment position="start"> <SearchIcon style={{color: 'ffffff'}}/> </InputAdornment>,
+                 startAdornment: <InputAdornment position="start"> <SearchIcon style={{color: 'ffffff', marginLeft: '10px'}}/> </InputAdornment>,
                 }}
                  />  
             </Stack>
