@@ -8,16 +8,16 @@ import { useTheme } from '@mui/material/styles';
 import { formatDistance, parseISO } from "date-fns";
 
 
-export default function ActivityListItem({user = [], created_at, nft =[], type = "like"}) {
+export default function ActivityListItem({user, created_at, nft, type = "like"}) {
  
     const theme = useTheme()
 
     return (
         <Container maxWidth className={classNames(styles["activity-list-item"])} sx={{display: 'flex', alignItems: 'center', gap: '10px'}}>
-                 <Avatar verified={user.verified} url={user.avatar?.url} />
+                 <Avatar verified={user?.verified} url={user?.avatar?.url} />
                 <Box component="div">
                 <Typography sx={{lineHeight: '1'}}>
-                   <b>{user.name}</b> {type === 'like' ? 'liked' : 'bought'} <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}}  href="/">{nft.name}</Link> by <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}} href="/">{nft.owner?.username}</Link>
+                   <b>{user?.name}</b> {type === 'like' ? 'liked' : 'bought'} <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}}  href="/">{nft?.name}</Link> by <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}} href="/">{nft?.owner?.username}</Link>
                 </Typography>
                 <Typography className={classNames(styles["activity-secondParagraph"])}>
                 {created_at && formatDistance(parseISO(created_at),new Date(), { addSuffix: true })}
