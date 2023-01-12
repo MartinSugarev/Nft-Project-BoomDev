@@ -1,0 +1,13 @@
+@use '../../styles/colors.scss';
+
+.activity-filters{
+
+}
+
+.activity-input{
+    background: colors.$background_paper;
+    border-radius: 30px;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+}
