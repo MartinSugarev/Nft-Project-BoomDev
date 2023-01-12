@@ -40,11 +40,9 @@ export default function ActivityFilters({filters}) {
               </FormControl >
               <FormControl fullWidth variant="standard" sx={{flex: 2}}> 
                  <TextField
-                 label=""
                  className={classNames(styles['activity-input'])}      
                  focused={false}
                  fullWidth={true}
-                 variant="standard"
                  InputProps={{  
                  startAdornment: <InputAdornment position="start"> <SearchIcon style={{color: 'ffffff', marginLeft: '10px'}}/> </InputAdornment>,
                 }}

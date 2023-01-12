@@ -1,4 +1,11 @@
+@use '../../styles/colors.scss';
+
 .activity-list-item{
     display: flex;
     flex-direction: row;
+}
+
+.activity-secondParagraph{
+color: colors.$text_disabled;
+line-height: 1;
 }
