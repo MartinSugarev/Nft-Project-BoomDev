@@ -13,7 +13,7 @@ export default function ActivityListItem({user, created_at, nft, type = "like"})
     const theme = useTheme()
 
     return (
-        <Container maxWidth className={classNames(styles["activity-list-item"])} sx={{display: 'flex', alignItems: 'center', gap: '10px'}}>
+        <div  className={classNames(styles["activity-list-item"])} sx={{display: 'flex', alignItems: 'center', gap: '10px'}}>
                 <Avatar verified={user?.verified} url={user?.avatar?.url}></Avatar>
                 <Box component="div">
                 <Typography sx={{lineHeight: '1'}}>
@@ -23,6 +23,6 @@ export default function ActivityListItem({user, created_at, nft, type = "like"})
                 {created_at && formatDistance(parseISO(created_at),new Date(), { addSuffix: true })}
                 </Typography>
                 </Box> 
-        </Container>
+        </div>
     )
 }
