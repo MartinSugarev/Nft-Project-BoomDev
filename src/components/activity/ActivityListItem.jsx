@@ -29,24 +29,3 @@ export default function ActivityListItem({user, created_at, nft, type = "like"})
 
 
 
-{
-    "created_at": Date,
-    "user": {
-       "avatar": {
-          "url": String
-       },
-       "verified": Boolean,
-       "name": String
-    },
-    "nft":{
-       "name": String,
-       "owner": {
-          "username": String,
-           "avatar": {
-              "url": String
-           },
-          "verified": Boolean
-       }
-    },
-    "type": "buy"
-   }
