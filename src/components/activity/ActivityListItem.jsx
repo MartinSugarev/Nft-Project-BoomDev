@@ -8,21 +8,34 @@ import { useTheme } from '@mui/material/styles';
 import { formatDistance, parseISO } from "date-fns";
 
 
-export default function ActivityListItem({user = [], created_at, nft, type = "like"}) {
- 
-    const theme = useTheme()
 
-    return (
-        <div  className={classNames(styles["activity-list-item"])}>
-                <Avatar verified={user.verified} url={user.avatar?.url}/>
-                <Box component="div">
-                <Typography sx={{lineHeight: '1'}}>
-                   <b>{user?.name}</b> {type === 'like' ? 'liked' : 'bought'} <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}}  href="/">{nft?.name}</Link> by <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}} href="/">{nft?.owner?.username}</Link>
-                </Typography>
-                <Typography className={classNames(styles["activity-secondParagraph"])}>
-                {created_at && formatDistance(parseISO(created_at),new Date(), { addSuffix: true })}
-                </Typography>
-                </Box> 
-        </div>
-    )
+Raw Blame
+
+ 
+import React from "react";
+import classNames from "classnames";
+import styles from "./ActivityListItem.module.scss";
+import Avatar from "../avatar/Avatar";
+import Link from "../link/Link";
+import { formatDistance, parseISO } from "date-fns";
+
+export default function ActivityListItem({
+  user,
+  created_at,
+  nft,
+  type = "like",
+}) {
+  return (
+    <div className={classNames(styles["activity-list-item"])}>
+      <div className={classNames(styles.wrapper)}>
+        <Avatar verified={user.verified} url={user.avatar.url}></Avatar>
+        <div>{user.name}</div>
+        {type == "like" ? <p>liked</p> : <p>bought</p>}
+        <Link href="/">{nft.name} </Link>
+        <p>by </p>
+        <Link href="/"> {nft.owner.username}</Link>
+      </div>
+      <div>{formatDistance(parseISO(created_at), new Date())} ago</div>
+    </div>
+  );
 }
