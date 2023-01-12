@@ -15,12 +15,12 @@ export default function Profile() {
     }, [])
 
     return (
-        <>
+        <div>
             <Header />
             <ProfileHero />
             <ProfileUser />
             <ProfileCollection />
             <Footer />
-        </>
+        </div>
     )
 }
