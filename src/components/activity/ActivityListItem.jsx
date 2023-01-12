@@ -8,17 +8,6 @@ import { useTheme } from '@mui/material/styles';
 import { formatDistance, parseISO } from "date-fns";
 
 
-
-Raw Blame
-
- 
-import React from "react";
-import classNames from "classnames";
-import styles from "./ActivityListItem.module.scss";
-import Avatar from "../avatar/Avatar";
-import Link from "../link/Link";
-import { formatDistance, parseISO } from "date-fns";
-
 export default function ActivityListItem({
   user,
   created_at,
