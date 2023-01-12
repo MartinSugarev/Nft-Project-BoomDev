@@ -14,7 +14,7 @@ export default function ActivityFilters({filters}) {
     }
 
     return (
-        <div   className={classNames(styles['activity-filters'])}>
+        <div  className={classNames(styles['activity-filters'])}>
             <Stack direction="row" justifyContent="flex-end" alignItems="flex-end" spacing={1} >
             <FormControl fullWidth sx={{flex: 1}}>
             <InputLabel id="select-label">Sort by</InputLabel>
@@ -40,9 +40,11 @@ export default function ActivityFilters({filters}) {
               </FormControl >
               <FormControl fullWidth variant="standard" sx={{flex: 2}}> 
                  <TextField
+                 label=""
                  className={classNames(styles['activity-input'])}      
                  focused={false}
                  fullWidth={true}
+                 variant="standard"
                  InputProps={{  
                  startAdornment: <InputAdornment position="start"> <SearchIcon style={{color: 'ffffff', marginLeft: '10px'}}/> </InputAdornment>,
                 }}
