@@ -14,8 +14,8 @@ export default function ActivityListItem({user, created_at, nft, type = "like"})
 
     return (
         <div className={classNames(styles["activity-list-item"])}>
-                <Avatar url={user.avatar.url} verified={user.verified}/>
             <Box component="div">
+                <Avatar url={user.avatar.url} verified={user.verified}/>
                 <Typography sx={{lineHeight: '1'}}>
                   <b>{user.name}</b> {type === 'like' ? 'liked' : 'bought'} <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}}  href="/">{nft.name}</Link> by <Link style={{color: theme.palette.secondary.main, textDecoration: 'underlined'}} href="/">{nft.owner.username}</Link>
                 </Typography>
