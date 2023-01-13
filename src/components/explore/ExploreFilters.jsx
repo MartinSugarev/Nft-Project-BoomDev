@@ -1,10 +1,10 @@
-import styles from "./ProfileCollectionFilters.module.scss";
+import styles from "./ExploreFilters.module.scss";
 import classNames from "classnames";
 import {Typography, Container, FormControl, Select, InputLabel, MenuItem, Stack, TextField, InputAdornment} from '@mui/material';
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function ProfileCollectionFilters({filters}) {
+export default function ActivityFilters({filters}) {
 
     const handlePriceRangeChange = () => {
 
@@ -14,9 +14,9 @@ export default function ProfileCollectionFilters({filters}) {
     }
 
     return (
-        <div   className={classNames(styles['profile-collection-filters'])}>
+        <div  className={classNames(styles['explore-filters'])}>
             <Stack direction="row" justifyContent="flex-end" alignItems="flex-end" spacing={1} >
-            <FormControl fullWidth>
+            <FormControl fullWidth sx={{flex: 1}}>
             <InputLabel id="select-label">Sort by</InputLabel>
             <Select
              label="Sort by"
@@ -27,7 +27,7 @@ export default function ProfileCollectionFilters({filters}) {
               <MenuItem value={30}>Thirty</MenuItem>
               </Select>
               </FormControl>
-            <FormControl fullWidth>
+            <FormControl fullWidth sx={{flex: 1}}>
             <InputLabel id="select-label">Price range</InputLabel>
             <Select
              label="Price range"
@@ -37,15 +37,13 @@ export default function ProfileCollectionFilters({filters}) {
              <MenuItem value={20}>Twenty</MenuItem>
               <MenuItem value={30}>Thirty</MenuItem>
               </Select>
-              </FormControl>
-              <FormControl fullWidth>
+              </FormControl >
+              <FormControl fullWidth variant="standard" sx={{flex: 2}}> 
                  <TextField
-                 className={classNames(styles['profile-input'])}      
+                 className={classNames(styles['explore-input'])}      
                  focused={false}
                  fullWidth={true}
-                 size="large"
-                 variant="standard"
-                 InputProps={{
+                 InputProps={{  
                  startAdornment: <InputAdornment position="start"> <SearchIcon style={{color: 'ffffff', marginLeft: '10px'}}/> </InputAdornment>,
                 }}
                  />  
@@ -54,5 +52,3 @@ export default function ProfileCollectionFilters({filters}) {
         </div>
     )
 }
-
-

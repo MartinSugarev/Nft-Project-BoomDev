@@ -19,9 +19,7 @@ export default function Trending({cards = []}) {
          </Select>
             </Box>
          <Grid container spacing={1}>
-             {cards.map((card, index) => {
-                 console.log(card);
-                 
+             {cards.map((card, index) => {        
                return  <Grid key={index} item xs={3}>
                     <Card name={card.name} mediaUrl={card.mediaUrl} user={card} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  />
                  </Grid>

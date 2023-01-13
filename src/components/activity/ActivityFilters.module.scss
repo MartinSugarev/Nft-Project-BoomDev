@@ -1,7 +1,8 @@
 @use '../../styles/colors.scss';
 
 .activity-filters{
-  display: block
+  display: block;
+  width: 90%;
 }
 
 .activity-input{
@@ -10,5 +11,6 @@
     overflow: hidden;
     padding: 0;
     margin: 0;
+
 }
 

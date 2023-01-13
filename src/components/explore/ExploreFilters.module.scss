@@ -1,0 +1,23 @@
+@use '../../styles/colors.scss';
+
+
+.explore-filters{
+    display: block;
+}
+
+.explore-input{
+    background: colors.$background_paper;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+.explore-input:focus{
+    outline: none;
+}
+.explore-input:hover{
+    outline: none;
+}
+
+.explore-collection-filters{
+    width: 100%;
+}

@@ -4,7 +4,7 @@ import {Stack} from '@mui/material';
 import React from 'react';
 import ActivityListItem from './ActivityListItem'
 
-export default function ActivityList({items}) {
+export default function ActivityList({items = []}) {
     return (
         <div className={classNames(styles["activity-list"])}>
              <Stack direction="column" spacing={2}>
