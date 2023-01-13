@@ -9,7 +9,7 @@ import { formatDistance, parseISO } from "date-fns";
 import Card from '../card/Card'
 
 
-export default function ActivityListItem({user, created_at, nft, type = "like", verified}) {
+export default function ActivityListItem({user, created_at, nft, type = "like"}) {
  
     const theme = useTheme()
 
