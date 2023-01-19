@@ -1,0 +1,9 @@
+@use '../../styles/colors.scss';
+.product-info {
+  display: block;
+}
+
+.stats {
+  border-color: transparent;
+}
+/*# sourceMappingURL=ProductInfo.module.css.map */

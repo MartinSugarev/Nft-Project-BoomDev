@@ -1,0 +1,10 @@
+.profile-hero {
+  height: 30vh;
+}
+
+.image {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+/*# sourceMappingURL=ProfileHero.module.css.map */

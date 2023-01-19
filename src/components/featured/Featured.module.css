@@ -1,0 +1,6 @@
+@use "../../styles/colors.scss";
+.feature-img {
+  border-radius: 1rem;
+  cursor: pointer;
+}
+/*# sourceMappingURL=Featured.module.css.map */

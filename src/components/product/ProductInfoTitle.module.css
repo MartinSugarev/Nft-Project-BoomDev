@@ -1,0 +1,11 @@
+@use "../../styles/colors.scss";
+.title {
+  font-weight: 700;
+  font-size: 2.5rem;
+  text-transform: capitalize;
+}
+
+.product-info-title {
+  text-align: left;
+}
+/*# sourceMappingURL=ProductInfoTitle.module.css.map */

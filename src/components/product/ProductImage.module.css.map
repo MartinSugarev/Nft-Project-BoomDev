@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,IAAI,CAAJ,0BAAI;AAGJ,AAAA,cAAc,CAAA;EACV,MAAM,EAAE,IAAI;CACf;;AAED,AAAA,MAAM,CAAA;EACF,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,IAAI;EACZ,UAAU,EAAE,OAAO;CACtB",
+    "sources": [
+        "ProductImage.module.scss"
+    ],
+    "names": [],
+    "file": "ProductImage.module.css"
+}

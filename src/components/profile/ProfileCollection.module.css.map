@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,mBAAmB,CAAA;EACf,OAAO,EAAE,KAAK;CACjB",
+    "sources": [
+        "ProfileCollection.module.scss"
+    ],
+    "names": [],
+    "file": "ProfileCollection.module.css"
+}

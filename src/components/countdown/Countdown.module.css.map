@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "Countdown.module.scss"
+    ],
+    "names": [],
+    "file": "Countdown.module.css"
+}
