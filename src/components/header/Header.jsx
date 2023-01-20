@@ -14,7 +14,7 @@ export default function Header(){
             <Grid item xs='auto'>
                 <Logo type='default' />
             </Grid>
-            <Grid item xs={'6'}>
+            <Grid item xs={6}>
                 <TextField
                  fullWidth={true}
                  placeholder="Find items, users and activities"
