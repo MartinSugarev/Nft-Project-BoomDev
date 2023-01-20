@@ -1,5 +1,5 @@
 module.exports = {
-    env: {
-      'apiUrl': 'https://project-4-api.boom.dev',
-    },
-  }
+  env: {
+    apiUrl: "https://nft-auction.herokuapp.com",
+  },
+};
