@@ -40,7 +40,8 @@ export default function ExploreFilters({filters}) {
               </FormControl >
               <FormControl fullWidth variant="standard" sx={{flex: 2}}> 
                  <TextField
-                 className={classNames(styles['explore-input'])}      
+                 className={classNames(styles['explore-input'])} 
+                 variant="standard"     
                  focused={false}
                  fullWidth={true}
                  InputProps={{  
