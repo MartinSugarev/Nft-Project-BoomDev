@@ -1,6 +1,6 @@
 import styles from "./ExploreFilters.module.scss";
 import classNames from "classnames";
-import {Typography, Container, FormControl, Select, InputLabel, MenuItem, Stack, TextField, InputAdornment} from '@mui/material';
+import { FormControl, Select, InputLabel, MenuItem, Stack, TextField, InputAdornment} from '@mui/material';
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
@@ -40,8 +40,7 @@ export default function ExploreFilters({filters}) {
               </FormControl >
               <FormControl fullWidth variant="standard" sx={{flex: 2}}> 
                  <TextField
-                 className={classNames(styles['explore-input'])} 
-                 variant="standard"     
+                 className={classNames(styles['explore-input'])}     
                  focused={false}
                  fullWidth={true}
                  InputProps={{  
