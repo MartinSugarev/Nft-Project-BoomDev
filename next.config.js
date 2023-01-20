@@ -1,5 +1,4 @@
-module.exports = {
-    env: {
+
+export const env = {
       apiUrl: 'https://project-4-api.boom.dev',
     }
-  }
