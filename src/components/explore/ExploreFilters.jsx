@@ -4,7 +4,7 @@ import {Typography, Container, FormControl, Select, InputLabel, MenuItem, Stack,
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function ActivityFilters({filters}) {
+export default function ExploreFilters({filters}) {
 
     const handlePriceRangeChange = () => {
 
