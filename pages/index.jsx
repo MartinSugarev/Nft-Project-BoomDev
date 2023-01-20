@@ -34,7 +34,7 @@ export default function Index() {
 
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/featured`)
+    const result = await fetch(`https://nft-auction.herokuapp.com/featured`)
     const response =  await result.json()
   //  setNfts(response.nfts)
     console.log(response.nfts);
