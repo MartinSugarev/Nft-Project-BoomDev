@@ -34,17 +34,38 @@ export default function Index() {
   useEffect(async () => {
     const result = await fetch(`https://project-4-api.boom.dev/trending`)
     const response =  await result.json()
-    console.log(response.filters);
     
     setTrendingItems(response.nfts)
     setTrendingFilters(response.filters)
   }, []);
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/top-collectors`)
-    const response =  await result.json()
-    setCollectors(response.users)
-    setCollectorFilters(response.filters)
+    const result1 =  fetch(`https://project-4-api.boom.dev/top-collectors`).then(res => res.json())
+    const result2 =  fetch(`https://nft-auction.herokuapp.com/top-collectors`).then(res => res.json())
+    Promise.allSettled([result1, result2])
+    .then(res => {
+      const fulfilled = res.filter(r => r.status === 'fulfilled')
+      return fulfilled
+
+    }).then(data => {
+      
+      data.forEach(d => {
+        setCollectors(prev => [...prev, ...d.value.users])
+       setCollectorFilters(prev => [d.value.filters])
+      })
+
+    
+  }
+    )
+
+    
+    return () => {
+      setCollectors([])
+      setCollectorFilters([])
+     }
+    // const response =  await result.json()
+    // setCollectors(response.users)
+    // setCollectorFilters(response.filters)
   }, []);
 
   useEffect(async () => {
