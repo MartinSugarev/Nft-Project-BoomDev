@@ -7,31 +7,21 @@ import How from "../src/components/how/How";
 import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
 
-import ActivityListItem from '../src/components/activity/ActivityListItem'
 
 const baseUrl = process.env.apiUrl
 
-import dataFeatured from "../data/featured.json";
-import dataTrending from "../data/trending.json";
-import dataUsers from "../data/users.json";
-import dataNfts from "../data/nfts.json";
 
 
 export default function Index() {
   const [featuredCards, setFeaturedCards] = useState([]);
   const [trendingItems, setTrendingItems] = useState([]);
+  const [trendingFilters, setTrendingFilters] = useState([])
   const [collectors, setCollectors] = useState([]);
+  const [collectorFilters, setCollectorFilters] = useState([])
   const [auctions, setAuctions] = useState([]);
   const [nfts, setNfts] = useState([]);
   const [users, setUsers] = useState([]);
   
-  // useEffect(() => {
-  //   setFeaturedCards(dataTrending);
-  //   setTrendingItems(dataFeatured);
-  //   setNfts(dataNfts);
-  //   setCollectors(dataUsers)
-  // }, []);
-
 
   useEffect(async () => {
     const result = await fetch(`https://project-4-api.boom.dev/featured`)
@@ -41,12 +31,27 @@ export default function Index() {
     setFeaturedCards(response.nfts);
   }, []);
 
+  useEffect(async () => {
+    const result = await fetch(`https://project-4-api.boom.dev/trending`)
+    const response =  await result.json()
+    setTrendingItems(response.nfts)
+    setTrendingFilters(response.filters)
+  }, []);
+
+  useEffect(async () => {
+    const result = await fetch(`https://project-4-api.boom.dev/top-collectors`)
+    const response =  await result.json()
+    console.log(response);
+    setCollectors(response.users)
+    setCollectorFilters(response.filters)
+  }, []);
+
   return (
     <>
       <Header />
       <Featured items={featuredCards} />
-      <Trending cards={trendingItems} />
-      <TopCollectors collectors={collectors}/>
+      <Trending cards={trendingItems} trendingFilters={trendingFilters} />
+      <TopCollectors collectors={collectors} collectorFilters={collectorFilters}/>
       <How />
       <Auctions cards={auctions}/>
       <Footer />

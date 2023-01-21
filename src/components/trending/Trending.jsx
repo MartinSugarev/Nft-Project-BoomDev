@@ -4,7 +4,7 @@ import Card from '../card/Card'
 
 
 
-export default function Trending({cards = []}) {
+export default function Trending({cards = [], trendingFilters = []}) {
 
 
 
@@ -21,7 +21,7 @@ export default function Trending({cards = []}) {
          <Grid container spacing={1}>
              {cards.map((card, index) => {        
                return  <Grid key={index} item xs={3}>
-                    <Card name={card.name} mediaUrl={card.mediaUrl} user={card} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  />
+                    <Card name={card.name} mediaUrl={card.mediaUrl} user={card.owner} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  />
                  </Grid>
              })}
         </Grid> 
