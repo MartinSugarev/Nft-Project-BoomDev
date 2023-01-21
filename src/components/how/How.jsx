@@ -4,12 +4,16 @@ import classNames from "classnames";
 import Step from './Step';
 import React from 'react'
 
-export default function How({description, title, items = [], link}) {
+export default function How({description = "Discover, collect, and sell extraordinary NFTs on the world's first & largest NFT marketplace. There are  three things you'll need in place to open your account and start buying or selling NFTs on BUM." , title = 'HOW IT WORKS', items = [
+    {title: 'Digital Currency', number: 1, description: "You can get ETH, the digital currency that fuels transactions on the Ethereum blockchain, from a digital currency exchange"},
+    {title: 'Crypto Wallet', number: 2, description: "A crypto wallet, such as MetaMask, stores your ETH and processes transactions on the Ethereum blockchain."},
+    {title: 'BUM.', number: 3, description: "Let's connect your wallet to BUM, edit your profile, and begin interacting in the space. "}
+], link}) {
     return (
        <div className={classNames(styles['how-layout'])} >
         <Container maxWidth={false} disableGutters>
             <Grid container direction="row" justifyContent="space-around" alignItems="center" className={classNames(styles['how-grid-container'])}>
-              <Grid item >
+              <Grid item xs={7}>
                  <Typography mb={2} className={classNames(styles['how-heading'])} variant="h1">
                      {title}
                  </Typography>

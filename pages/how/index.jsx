@@ -6,7 +6,7 @@ import { Box } from "@mui/material";
 
 import React from 'react'
 
-export default function index() {
+export default function Index() {
     return (
         <Box component="div" sx={{display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
           <Header />

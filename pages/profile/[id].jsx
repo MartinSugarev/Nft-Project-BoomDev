@@ -4,22 +4,30 @@ import Footer from '../../src/components/footer/Footer';
 import ProfileHero from '../../src/components/profile/ProfileHero';
 import ProfileUser from '../../src/components/profile/ProfileUser';
 import ProfileCollection from '../../src/components/profile/ProfileCollection';
-import profileData from '../../data/profile.json'
+import { useRouter } from "next/router";
 
-export default function Profile() {
+
+export default function Index() {
+  const router = useRouter();
+  const { id } = router.query
 
     const [profile, setProfile] = useState([])
+    const [profileFilters, setProfileFilters] = useState([])
 
-    useEffect(() => {
-       setProfile(profileData)
-    }, [])
+    useEffect(async () => {
+        const result = await fetch(`https://project-4-api.boom.dev/users/${id}`)
+        const response =  await result.json()
+        
+        setProfile(response.profile)
+        setProfileFilters(response.filters)
+      }, []);
 
     return (
         <div>
             <Header />
             <ProfileHero />
             <ProfileUser />
-            <ProfileCollection />
+            <ProfileCollection  user={profile} filters={profileFilters}/>
             <Footer />
         </div>
     )

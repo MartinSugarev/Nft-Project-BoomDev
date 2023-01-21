@@ -2,11 +2,11 @@ import React from 'react';
 import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
 import Card from '../card/Card';
 
-export default function Auctions({cards = []}) {
+export default function Auctions({cards = [], filters}) {
 
 
     return (
-        <Container maxWidth={false} sx={{padding: '30px 0 40px' }}>
+      cards.length !== 0 &&  <Container maxWidth={false} sx={{padding: '30px 0 40px' }}>
             <Box sx={{display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '5vh'}}>
                <Typography variant="h2">
                  🔥 Live Auctions

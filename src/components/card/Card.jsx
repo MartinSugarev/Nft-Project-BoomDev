@@ -27,7 +27,7 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
     return (
         <CardContainer sx={{background:  isLive && 'rgba(36,242,94,0.08)'}} className={classNames(styles['card'])}>
            <CardHeader 
-            avatar={<Avatar url={user?.avatar.url} verified={user?.verified}/>}/> 
+            avatar={<Avatar url={user?.avatar.url} verified={user?.verified} />}/> 
        <CardContainer sx={{position: 'relative', borderRadius: '20px'}}>
         <CardMedia
         className={classNames(styles['media'])}

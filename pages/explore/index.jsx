@@ -4,18 +4,20 @@ import ExploreTitle from '../../src/components/explore/ExploreTitle';
 import ExploreFilters from '../../src/components/explore/ExploreFilters';
 import { Container, Grid} from '@mui/material';
 import Card from '../../src/components/card/Card';
-
-import nftsInfo from '../../data/nfts.json'
-
 import React, {useEffect, useState} from 'react'
 
-export default function index() {
+export default function Index() {
 
 
     const [nfts, setNfts] = useState([]);
+    const [nftFilters, setNftFilters] = useState([])
 
-    useEffect(() => {
-      setNfts(nftsInfo);
+    useEffect(async () => {
+      const result = await fetch(`https://project-4-api.boom.dev/explore`)
+      const response =  await result.json()
+
+      setNfts(response.nfts)
+      setNftFilters(response.filters)
     }, []);
 
     return (
@@ -27,13 +29,13 @@ export default function index() {
                    <ExploreTitle />
                 </Grid>
                 <Grid item xs={7}>
-                   <ExploreFilters />
+                   <ExploreFilters filters={nftFilters} />
                 </Grid>
               </Grid>
               <Grid container spacing={1}>
                    {nfts.map((n, index) => {
                        return <Grid item xs={3} key={index} >
-                                 <Card  name={n.name} likes={n.likes} mediaUrl={n.mediaUrl} user={n.user} price={n.price} currency={n.currency} timeLeft={n.timeLeft} />
+                                 <Card  name={n.name} likes={n.likes} mediaUrl={n.mediaUrl} user={n.owner} price={n.price} currency={n.currency} timeLeft={n.timeLeft} />
                              </Grid>
                    })}
               </Grid>

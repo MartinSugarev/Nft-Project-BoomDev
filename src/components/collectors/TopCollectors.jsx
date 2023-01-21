@@ -1,18 +1,10 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React from 'react';
 import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
 import CollectorColumn from './CollectorColumn';
 import lodash from 'lodash';
 
 
-export default function TopCollectors({collectors = [], collectorFilters = []}) {
-
-    // const [changedArr, setChangedArr] = useState([])
-
-    //  useLayoutEffect(() => {
-    //    const newCollectorsArr = collectors.map((col, index) => ({...col, 'id': index + 1}))
-    //    setChangedArr(newCollectorsArr)
-    //    console.log(newCollectorsArr);   
-    //  }, [])
+export default function TopCollectors({collectors = [], filters = []}) {
 
 
     return (
@@ -26,9 +18,7 @@ export default function TopCollectors({collectors = [], collectorFilters = []}) 
          </Select>
             </Box>
          <Grid container spacing={1}>
-             {lodash.chunk(collectors.sort((a, b) => b.nftCount - a.nftCount).map((col, index) => ({...col, 'id': index + 1})), 3).map((card, index) => {  
-                 console.log('card');
-                 
+             {lodash.chunk(collectors.sort((a, b) => b.nftCount - a.nftCount).map((col, index) => ({...col, 'id': index + 1})), 3).map((card, index) => {                
                return  <Grid key={index} item xs={3}>
                     <CollectorColumn items={card}/>
                  </Grid>

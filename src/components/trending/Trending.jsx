@@ -1,12 +1,14 @@
 import React from 'react';
-import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
+import {Container, Select, Grid, Box, Typography, MenuItem, FormControl, InputLabel} from '@mui/material';
 import Card from '../card/Card'
 
 
 
-export default function Trending({cards = [], trendingFilters = []}) {
+export default function Trending({cards = [], filters = []}) {
 
+   const handleThisWeekChange = () => {
 
+   }
 
     return (
         <Container maxWidth={false} sx={{padding: '30px 0' }}>
@@ -14,12 +16,21 @@ export default function Trending({cards = [], trendingFilters = []}) {
                <Typography variant="h2">
                    Trending
                </Typography>
-         <Select value=""  displayEmpty>
-               <MenuItem value="" disabled >This week</MenuItem>   
-         </Select>
+               <FormControl sx={{minWidth: '200px'}}>
+               <InputLabel id="demo-simple-select-label">This week</InputLabel>
+            <Select
+             label=""
+             onChange={handleThisWeekChange}
+              >  
+              {/* {[...(filters.type || []), ...(filters.sort || [])].map((v, index ) => {
+                  return <MenuItem key={index} value={v.value}>{v.label}</MenuItem>
+              })}     */}
+              </Select>
+              </FormControl>
             </Box>
          <Grid container spacing={1}>
-             {cards.map((card, index) => {        
+             {cards.map((card, index) => {  
+                       
                return  <Grid key={index} item xs={3}>
                     <Card name={card.name} mediaUrl={card.mediaUrl} user={card.owner} price={card.price} currency={card.currency} timeLeft={card.timeLeft}  />
                  </Grid>

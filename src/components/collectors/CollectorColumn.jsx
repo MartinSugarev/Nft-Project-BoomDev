@@ -6,7 +6,7 @@ import Collector from "./Collector";
 
 export default function CollectorColumn({ items = [] }) {
   return (
-    <Container maxWidth={false}>
+    <Container maxWidth={false} disableGutters>
       {items.map((i, index) => {
         const type = index % 2 !== 0 ? "lighter" : "darker";
         return (

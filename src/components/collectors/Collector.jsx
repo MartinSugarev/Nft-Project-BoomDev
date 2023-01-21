@@ -10,22 +10,20 @@ export default function Collector({
   verified,
   type,
   nftsCount,
-  number,
+  id,
 }) {
   return (
-    <Container
-      maxWidth={false}
-      disableGutters
+    <div
       className={classNames({
         [styles["container"]]: true,
         [styles["container"]]: type === "lighter" ? true : false,
       })}
     >
-      <Grid container direction="row">
+      <Grid container direction="row" >
         <Grid item xs={3} className={classNames(styles["collector-number"])}>
-          {number}
+          {id}
         </Grid>
-        <Grid item>
+        <Grid item xs={9}>
           <User
             name={name}
             avatar={avatar}
@@ -34,6 +32,6 @@ export default function Collector({
           />
         </Grid>
       </Grid>
-    </Container>
+    </div>
   );
 }

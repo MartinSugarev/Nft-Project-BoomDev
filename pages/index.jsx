@@ -19,8 +19,8 @@ export default function Index() {
   const [collectors, setCollectors] = useState([]);
   const [collectorFilters, setCollectorFilters] = useState([])
   const [auctions, setAuctions] = useState([]);
-  const [nfts, setNfts] = useState([]);
-  const [users, setUsers] = useState([]);
+  const [auctionFilters, setAuctionFilters] = useState([])
+
   
 
   useEffect(async () => {
@@ -34,6 +34,8 @@ export default function Index() {
   useEffect(async () => {
     const result = await fetch(`https://project-4-api.boom.dev/trending`)
     const response =  await result.json()
+    console.log(response.filters);
+    
     setTrendingItems(response.nfts)
     setTrendingFilters(response.filters)
   }, []);
@@ -41,20 +43,26 @@ export default function Index() {
   useEffect(async () => {
     const result = await fetch(`https://project-4-api.boom.dev/top-collectors`)
     const response =  await result.json()
-    console.log(response);
     setCollectors(response.users)
     setCollectorFilters(response.filters)
   }, []);
 
+  useEffect(async () => {
+    const result = await fetch(`https://project-4-api.boom.dev/live-auctions`)
+    const response =  await result.json()
+    setAuctions(response.nfts)
+     setAuctionFilters(response.filters)
+  }, []);
+
   return (
-    <>
+    <div style={{display: 'flex', flexDirection: 'column', gap: '2rem'}}>
       <Header />
       <Featured items={featuredCards} />
-      <Trending cards={trendingItems} trendingFilters={trendingFilters} />
-      <TopCollectors collectors={collectors} collectorFilters={collectorFilters}/>
+      <Trending cards={trendingItems} filters={trendingFilters} />
+      <TopCollectors collectors={collectors} filters={collectorFilters}/>
       <How />
-      <Auctions cards={auctions}/>
+      <Auctions cards={auctions} filters={auctionFilters}/>
       <Footer />
-    </>
+    </div>
   );
 }
