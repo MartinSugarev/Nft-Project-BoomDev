@@ -15,6 +15,9 @@ export default function Index() {
 
   useEffect(async () => {
 
+    console.log(process.env.apiUrl);
+    
+
     try {
       const result = await fetch(`https://project-4-api.boom.dev/nfts/${id}`)
       const response =  await result.json()
