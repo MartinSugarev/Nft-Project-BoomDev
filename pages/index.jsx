@@ -8,7 +8,7 @@ import Auctions from "../src/components/auctions/Auctions";
 import Footer from "../src/components/footer/Footer";
 
 
-const baseUrl = process.env.apiUrl
+
 
 
 
@@ -24,6 +24,8 @@ export default function Index() {
   const [topCollectorsValue, setTopCollectorsValue] = useState()
   const [priceRange, setPriceRange] = useState();
 
+  const baseUrl = process.env.apiUrl
+
 
   const handleThisWeekChange = (event) => {
     setFilterValue(event.target.value)    
@@ -35,14 +37,13 @@ export default function Index() {
 
   const handlePriceRangeByChange = (event) => {
     setPriceRange(event.target.value)
-    console.log(priceRange);
     
   }
 
   
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/featured`)
+    const result = await fetch(`${baseUrl}/featured`)
     const response =  await result.json()
     response.nfts[0].rows = 2;
     response.nfts[0].cols = 3;
@@ -50,7 +51,7 @@ export default function Index() {
   }, []);
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/trending`)
+    const result = await fetch(`${baseUrl}/trending`)
     const response =  await result.json()
     
     setTrendingItems(response.nfts)
@@ -58,7 +59,7 @@ export default function Index() {
   }, []);
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/top-collectors`)
+    const result = await fetch(`${baseUrl}/top-collectors`)
     const response = await result.json()
 
     setCollectors(response.users)
@@ -68,26 +69,26 @@ export default function Index() {
   }, []);
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/live-auctions`)
+    const result = await fetch(`${baseUrl}/live-auctions`)
     const response =  await result.json()
     setAuctions(response.nfts)
      setAuctionFilters(response.filters)
   }, []);
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/trending?sort=${filterValue}`)
+    const result = await fetch(`${baseUrl}/trending?sort=${filterValue}`)
     const response =  await result.json()
     setTrendingItems(response.nfts)
   }, [filterValue])
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/top-collectors?sort=${topCollectorsValue}`)
+    const result = await fetch(`${baseUrl}/top-collectors?sort=${topCollectorsValue}`)
     const response =  await result.json() 
     setCollectors(response.users)
   }, [topCollectorsValue])
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/live-auctions?sort=${priceRange}`)
+    const result = await fetch(`${baseUrl}/live-auctions?sort=${priceRange}`)
     const response =  await result.json()
     setAuctions(response.nfts)
   }, [priceRange]);

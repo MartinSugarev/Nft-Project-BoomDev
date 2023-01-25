@@ -14,9 +14,11 @@ export default function Index() {
     const [sort, setSort] = useState()
     const [price, setPrice] = useState()
 
+    const baseUrl = process.env.apiUrl
+
 
     useEffect(async () => {
-      const result = await fetch(`https://project-4-api.boom.dev/explore`)
+      const result = await fetch(`${baseUrl}/explore`)
       const response =  await result.json()
       
       setNfts(response.nfts)
@@ -25,13 +27,13 @@ export default function Index() {
     }, []);
 
     useEffect(async () => {
-      const result = await fetch(`https://project-4-api.boom.dev/explore?sort=${sort}`)
+      const result = await fetch(`${baseUrl}/explore?sort=${sort}`)
       const response =  await result.json()
       setNfts(response.nfts)
     }, [sort])
 
     useEffect(async () => {
-      const result = await fetch(`https://project-4-api.boom.dev/explore?price=${price}`)
+      const result = await fetch(`${baseUrl}/explore?price=${price}`)
       const response =  await result.json()
       setNfts(response.nfts)
     }, [price])

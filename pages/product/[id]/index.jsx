@@ -16,7 +16,7 @@ export default function Index() {
   useEffect(async () => {
 
     try {
-      const result = await fetch(`${baseUrl}/nfts/${id}`)
+      const result = await fetch(`https://project-4-api.boom.dev/nfts/${id}`)
       const response =  await result.json()
       
       setProduct(response)

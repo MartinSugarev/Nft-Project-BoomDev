@@ -7,16 +7,17 @@ import React, {useEffect, useState} from 'react'
 
 export default function Index() {
 
-
     const [activity, setActivity] = useState()
     const [activityFilters, setActivityFilters] = useState([])
     const [sort, setSort] = useState([])
     const [type, setType] = useState([])
 
+    const baseUrl = process.env.apiUrl
+
     useEffect(async () => {
 
       try {
-        const result = await fetch(`https://project-4-api.boom.dev/activities`)
+        const result = await fetch(`${baseUrl}/activities`)
         const response =  await result.json()  
         
         setActivity(response.activities)
@@ -29,7 +30,7 @@ export default function Index() {
 
       useEffect(async () => {
         try {
-          const result = await fetch(`https://project-4-api.boom.dev/activities?sort=${sort}`)
+          const result = await fetch(`${baseUrl}/activities?sort=${sort}`)
           const response =  await result.json()
           setActivity(response.nfts)
         } catch (error) {
@@ -40,7 +41,7 @@ export default function Index() {
   
       useEffect(async () => {
         try {
-          const result = await fetch(`https://project-4-api.boom.dev/activities?type=${type}`)
+          const result = await fetch(`${baseUrl}/activities?type=${type}`)
           const response =  await result.json()
           setActivity(response.nfts)
         } catch (error) {
