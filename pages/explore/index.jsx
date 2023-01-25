@@ -11,14 +11,38 @@ export default function Index() {
 
     const [nfts, setNfts] = useState([]);
     const [nftFilters, setNftFilters] = useState([])
+    const [sort, setSort] = useState()
+    const [price, setPrice] = useState()
+
 
     useEffect(async () => {
       const result = await fetch(`https://project-4-api.boom.dev/explore`)
       const response =  await result.json()
-
+      
       setNfts(response.nfts)
       setNftFilters(response.filters)
+
     }, []);
+
+    useEffect(async () => {
+      const result = await fetch(`https://project-4-api.boom.dev/explore?sort=${sort}`)
+      const response =  await result.json()
+      setNfts(response.nfts)
+    }, [sort])
+
+    useEffect(async () => {
+      const result = await fetch(`https://project-4-api.boom.dev/explore?price=${price}`)
+      const response =  await result.json()
+      setNfts(response.nfts)
+    }, [price])
+
+
+    const handlePriceRangeChange = (event) => {
+      setPrice(event.target.value);
+  }
+  const handleSortByChange = (event) => {
+      setSort(event.target.value);
+  }
 
     return (
    <>     
@@ -29,7 +53,7 @@ export default function Index() {
                    <ExploreTitle />
                 </Grid>
                 <Grid item xs={7}>
-                   <ExploreFilters filters={nftFilters} />
+                   <ExploreFilters filters={nftFilters} handlePriceRangeChange={handlePriceRangeChange} handleSortByChange={handleSortByChange}/>
                 </Grid>
               </Grid>
               <Grid container spacing={1}>

@@ -4,11 +4,9 @@ import Card from '../card/Card'
 
 
 
-export default function Trending({cards = [], filters = []}) {
+export default function Trending({cards = [], filters, handleThisWeekChange}) {
 
-   const handleThisWeekChange = () => {
-
-   }
+ 
 
     return (
         <Container maxWidth={false} sx={{padding: '30px 0' }}>
@@ -22,9 +20,9 @@ export default function Trending({cards = [], filters = []}) {
              label=""
              onChange={handleThisWeekChange}
               >  
-              {/* {[...(filters.type || []), ...(filters.sort || [])].map((v, index ) => {
-                  return <MenuItem key={index} value={v.value}>{v.label}</MenuItem>
-              })}     */}
+            {Array.isArray(filters.sort) && filters.sort.map((s, i) => (
+            <MenuItem key={i} value={s.value}>{s.label}</MenuItem>
+              ))}  
               </Select>
               </FormControl>
             </Box>

@@ -55,15 +55,15 @@ export default function Card({name , likes = 0 ,mediaUrl, user, price, currency,
     )
 }
 
-Card.propTypes = {
-    name: PropTypes.string,
-    likes: PropTypes.number,
-    mediaUrl: PropTypes.string,
-    user:{
-        avatarUrl: PropTypes.string,
-        verified: PropTypes.boolean
-    },
-    price: PropTypes.string,
-    currency: PropTypes.string,
-    timeLeft: PropTypes.number
-}
+// Card.propTypes = {
+//     name: PropTypes.string,
+//     likes: PropTypes.number,
+//     mediaUrl: PropTypes.string,
+//     user:{
+//         avatarUrl: PropTypes.string,
+//         verified: PropTypes.boolean
+//     },
+//     price: PropTypes.string,
+//     currency: PropTypes.string,
+//     timeLeft: PropTypes.number
+// }

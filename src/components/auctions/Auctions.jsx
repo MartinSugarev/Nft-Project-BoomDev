@@ -1,8 +1,8 @@
 import React from 'react';
-import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
+import {Container, Select, Grid, Box, Typography, MenuItem, FormControl, InputLabel} from '@mui/material';
 import Card from '../card/Card';
 
-export default function Auctions({cards = [], filters}) {
+export default function Auctions({cards = [], filters, handlePriceRangeByChange }) {
 
 
     return (
@@ -11,9 +11,17 @@ export default function Auctions({cards = [], filters}) {
                <Typography variant="h2">
                  🔥 Live Auctions
                </Typography>
-         <Select value=""  displayEmpty>
-               <MenuItem value="" disabled >This week</MenuItem>   
-         </Select>
+               <FormControl sx={{minWidth: '200px'}}>
+               <InputLabel id="demo-simple-select-label">Price range</InputLabel>
+            <Select
+             label=""
+             onChange={handlePriceRangeByChange}
+              >  
+            {Array.isArray(filters.price) && filters.price.map((s, i) => (
+            <MenuItem key={i} value={s.value}>{s.label}</MenuItem>
+              ))}  
+              </Select>
+              </FormControl>
             </Box>
          <Grid container spacing={1}>
              {cards.map((card, index) => {

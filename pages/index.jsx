@@ -20,6 +20,24 @@ export default function Index() {
   const [collectorFilters, setCollectorFilters] = useState([])
   const [auctions, setAuctions] = useState([]);
   const [auctionFilters, setAuctionFilters] = useState([])
+  const [filterValue, setFilterValue] = useState() 
+  const [topCollectorsValue, setTopCollectorsValue] = useState()
+  const [priceRange, setPriceRange] = useState();
+
+
+  const handleThisWeekChange = (event) => {
+    setFilterValue(event.target.value)    
+  }
+
+  const handleSortByChange = (event) => {
+    setTopCollectorsValue(event.target.value)    
+  }
+
+  const handlePriceRangeByChange = (event) => {
+    setPriceRange(event.target.value)
+    console.log(priceRange);
+    
+  }
 
   
 
@@ -40,32 +58,13 @@ export default function Index() {
   }, []);
 
   useEffect(async () => {
-    const result1 =  fetch(`https://project-4-api.boom.dev/top-collectors`).then(res => res.json())
-    const result2 =  fetch(`https://nft-auction.herokuapp.com/top-collectors`).then(res => res.json())
-    Promise.allSettled([result1, result2])
-    .then(res => {
-      const fulfilled = res.filter(r => r.status === 'fulfilled')
-      return fulfilled
+    const result = await fetch(`https://project-4-api.boom.dev/top-collectors`)
+    const response = await result.json()
 
-    }).then(data => {
-      
-      data.forEach(d => {
-        setCollectors(prev => [...prev, ...d.value.users])
-       setCollectorFilters(prev => [d.value.filters])
-      })
-
+    setCollectors(response.users)
+    setCollectorFilters(response.filters)
     
-  }
-    )
-
-    
-    return () => {
-      setCollectors([])
-      setCollectorFilters([])
-     }
-    // const response =  await result.json()
-    // setCollectors(response.users)
-    // setCollectorFilters(response.filters)
+ 
   }, []);
 
   useEffect(async () => {
@@ -75,14 +74,32 @@ export default function Index() {
      setAuctionFilters(response.filters)
   }, []);
 
+  useEffect(async () => {
+    const result = await fetch(`https://project-4-api.boom.dev/trending?sort=${filterValue}`)
+    const response =  await result.json()
+    setTrendingItems(response.nfts)
+  }, [filterValue])
+
+  useEffect(async () => {
+    const result = await fetch(`https://project-4-api.boom.dev/top-collectors?sort=${topCollectorsValue}`)
+    const response =  await result.json() 
+    setCollectors(response.users)
+  }, [topCollectorsValue])
+
+  useEffect(async () => {
+    const result = await fetch(`https://project-4-api.boom.dev/live-auctions?sort=${priceRange}`)
+    const response =  await result.json()
+    setAuctions(response.nfts)
+  }, [priceRange]);
+
   return (
     <div style={{display: 'flex', flexDirection: 'column', gap: '2rem'}}>
       <Header />
       <Featured items={featuredCards} />
-      <Trending cards={trendingItems} filters={trendingFilters} />
-      <TopCollectors collectors={collectors} filters={collectorFilters}/>
+      <Trending cards={trendingItems} filters={trendingFilters} handleThisWeekChange={handleThisWeekChange}/>
+      <TopCollectors collectors={collectors} filters={collectorFilters} handleSortByChange={handleSortByChange}/>
       <How />
-      <Auctions cards={auctions} filters={auctionFilters}/>
+      <Auctions cards={auctions} filters={auctionFilters} handlePriceRangeByChange={handlePriceRangeByChange}/>
       <Footer />
     </div>
   );

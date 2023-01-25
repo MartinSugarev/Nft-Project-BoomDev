@@ -1,5 +1,5 @@
 import styles from './ProductInfoTimer.module.scss';
-import { Container, Grid, Typography, Box } from '@mui/material';
+import { Grid, Typography, Box } from '@mui/material';
 import classNames from "classnames";
 import React from 'react';
 import Countdown from '../countdown/Countdown';

@@ -13,13 +13,21 @@ export default function Index() {
   const [product, setProduct] = useState();
 
   useEffect(async () => {
-    const result = await fetch(`https://project-4-api.boom.dev/nfts/${id}`)
-    const response =  await result.json()
-    setProduct(response)
+
+    try {
+      const result = await fetch(`https://project-4-api.boom.dev/nfts/${id}`)
+      const response =  await result.json()
+      console.log(response);
+      
+      setProduct(response)
+    } catch (error) {
+      throw(error)
+    }
+
   }, []);
 
   return (
-    <div>
+    <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
       <Header />
       <ProductContainer product={product} />
       <Footer />

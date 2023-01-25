@@ -4,14 +4,9 @@ import {Typography, Container, FormControl, Select, InputLabel, MenuItem, Stack,
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function ActivityFilters({filters}) {
+export default function ActivityFilters({filters = [], handleTypeChange, handleSortByChange}) {
 
-    const handlePriceRangeChange = () => {
 
-    }
-    const handleSortByChange = () => {
-
-    }
 
     return (
         <div  className={classNames(styles['activity-filters'])}>
@@ -22,20 +17,20 @@ export default function ActivityFilters({filters}) {
              label="Sort by"
              onChange={handleSortByChange}
               >
-             <MenuItem value={10}>Ten</MenuItem>
-             <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+            {Array.isArray(filters.sort) && filters.sort?.map((s, i) => (
+            <MenuItem key={i} value={s.value}>{s.label}</MenuItem>
+              ))}  
               </Select>
               </FormControl>
             <FormControl fullWidth sx={{flex: 1}}>
-            <InputLabel id="select-label">Price range</InputLabel>
+            <InputLabel id="select-label">Type</InputLabel>
             <Select
              label="Price range"
-             onChange={handlePriceRangeChange}
+             onChange={handleTypeChange}
               >
-             <MenuItem value={10}>Ten</MenuItem>
-             <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+             {Array.isArray(filters.type) && filters.type.map((s, i) => (
+                 <MenuItem key={i} value={s.value}>{s.label}</MenuItem>
+              ))}  
               </Select>
               </FormControl >
               <FormControl fullWidth variant="standard" sx={{flex: 2}}> 

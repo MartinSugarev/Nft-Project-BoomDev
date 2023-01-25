@@ -4,14 +4,9 @@ import { FormControl, Select, InputLabel, MenuItem, Stack, TextField, InputAdorn
 import React from 'react';
 import SearchIcon from '@mui/icons-material/Search';
 
-export default function ExploreFilters({filters}) {
+export default function ExploreFilters({filters = [], handleSortByChange, handlePriceRangeChange}) {
 
-    const handlePriceRangeChange = () => {
 
-    }
-    const handleSortByChange = () => {
-
-    }
 
     return (
         <div  className={classNames(styles['explore-filters'])}>
@@ -22,9 +17,9 @@ export default function ExploreFilters({filters}) {
              label="Sort by"
              onChange={handleSortByChange}
               >
-             <MenuItem value={10}>Ten</MenuItem>
-             <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+              { Array.isArray(filters.sort) && filters.sort?.map((s, i) => (
+                 <MenuItem key={i} value={s.value}>{s.label}</MenuItem>
+              ))}    
               </Select>
               </FormControl>
             <FormControl fullWidth sx={{flex: 1}}>
@@ -33,9 +28,9 @@ export default function ExploreFilters({filters}) {
              label="Price range"
              onChange={handlePriceRangeChange}
               >
-             <MenuItem value={10}>Ten</MenuItem>
-             <MenuItem value={20}>Twenty</MenuItem>
-              <MenuItem value={30}>Thirty</MenuItem>
+             {Array.isArray(filters.price) && filters.price.map((s, i) => (
+                 <MenuItem key={i} value={s.value}>{s.label}</MenuItem>
+              ))}  
               </Select>
               </FormControl >
               <FormControl fullWidth variant="standard" sx={{flex: 2}}> 

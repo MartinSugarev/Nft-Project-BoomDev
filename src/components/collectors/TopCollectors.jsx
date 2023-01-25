@@ -1,10 +1,10 @@
 import React from 'react';
-import {Container, Select, Grid, Box, Typography, MenuItem} from '@mui/material';
+import {Container, Select, Grid, Box, Typography, MenuItem, FormControl, InputLabel} from '@mui/material';
 import CollectorColumn from './CollectorColumn';
 import lodash from 'lodash';
 
 
-export default function TopCollectors({collectors = [], filters = []}) {
+export default function TopCollectors({collectors = [], filters = [], handleSortByChange}) {
 
 
     return (
@@ -13,9 +13,17 @@ export default function TopCollectors({collectors = [], filters = []}) {
                <Typography variant="h2">
                    Top Collectors
                </Typography>
-         <Select value=""  displayEmpty sx={{background: '#4e24f2', width: '15vw'}}>
-               <MenuItem value="" disabled >Sort By</MenuItem>   
-         </Select>
+               <FormControl sx={{minWidth: '200px'}}>
+               <InputLabel id="demo-simple-select-label">Sort by</InputLabel>
+            <Select
+             label=""
+             onChange={handleSortByChange}
+              >  
+            {Array.isArray(filters.sort) && filters.sort.map((s, i) => (
+            <MenuItem key={i} value={s.value}>{s.label}</MenuItem>
+              ))}  
+              </Select>
+              </FormControl>
             </Box>
          <Grid container spacing={1}>
              {lodash.chunk(collectors.sort((a, b) => b.nftCount - a.nftCount).map((col, index) => ({...col, 'id': index + 1})), 3).map((card, index) => {                

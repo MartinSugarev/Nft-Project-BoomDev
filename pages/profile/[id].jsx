@@ -15,11 +15,16 @@ export default function Index() {
     const [profileFilters, setProfileFilters] = useState([])
 
     useEffect(async () => {
-        const result = await fetch(`https://project-4-api.boom.dev/users/${id}`)
-        const response =  await result.json()
-        
-        setProfile(response.profile)
-        setProfileFilters(response.filters)
+        try {
+          const result = await fetch(`https://project-4-api.boom.dev/users/${id}`)
+          const response =  await result.json()
+          
+          setProfile(response.profile)
+          setProfileFilters(response.filters)
+        } catch (error) {
+          throw(error)
+        }
+
       }, []);
 
     return (
