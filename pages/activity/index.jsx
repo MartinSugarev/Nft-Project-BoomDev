@@ -26,7 +26,7 @@ export default function Index() {
         throw(error)
       }
 
-      }, []);
+      });
 
       useEffect(async () => {
         try {
