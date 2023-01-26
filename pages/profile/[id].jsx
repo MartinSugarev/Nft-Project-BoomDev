@@ -9,13 +9,14 @@ import { useRouter } from "next/router";
 
 export default function Index() {
   const router = useRouter();
-  const { id } = router.query
+  const { id } = router.query;
+  const baseUrl = process.env.apiUrl
 
     const [profile, setProfile] = useState([])
     const [profileFilters, setProfileFilters] = useState([])
 
     useEffect(async () => {
-          const result = await fetch(`https://project-4-api.boom.dev/users/${id}`)
+          const result = await fetch(`${baseUrl}/users/${id}`)
           const response =  await result.json()
           
           setProfile(response.profile)
