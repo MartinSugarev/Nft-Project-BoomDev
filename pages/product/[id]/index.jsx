@@ -19,7 +19,7 @@ export default function Index() {
     
 
     try {
-      const result = await fetch(`https://project-4-api.boom.dev/nfts/${id}`)
+      const result = await fetch(`${baseUrl}/nfts/${id}`)
       const response =  await result.json()
       
       setProduct(response)
