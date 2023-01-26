@@ -26,27 +26,27 @@ export default function Index() {
 
       });
 
-      useEffect(async () => {
-        try {
-          const result = await fetch(`${baseUrl}/activities?sort=${sort}`)
-          const response =  await result.json()
-          setActivity(response.activities)
-        } catch (error) {
-          throw(error)
-        }
+      // useEffect(async () => {
+      //   try {
+      //     const result = await fetch(`${baseUrl}/activities?sort=${sort}`)
+      //     const response =  await result.json()
+      //     setActivity(response.activities)
+      //   } catch (error) {
+      //     throw(error)
+      //   }
 
-      }, [sort])
+      // }, [sort])
   
-      useEffect(async () => {
-        try {
-          const result = await fetch(`${baseUrl}/activities?type=${type}`)
-          const response =  await result.json()
-          setActivity(response.activities)
-        } catch (error) {
-          throw(error)
-        }
+      // useEffect(async () => {
+      //   try {
+      //     const result = await fetch(`${baseUrl}/activities?type=${type}`)
+      //     const response =  await result.json()
+      //     setActivity(response.activities)
+      //   } catch (error) {
+      //     throw(error)
+      //   }
 
-      }, [type])
+      // }, [type])
 
       const handleTypeChange = (event) => {
         setSort(event.target.value);
