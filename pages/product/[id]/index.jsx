@@ -17,11 +17,12 @@ export default function Index() {
     
       const result = await fetch(`${baseUrl}/nfts/${id}`)
       const response =  await result.json()
+      console.log(`${baseUrl}/nfts/${id}`);
       
       setProduct(response)
     
 
-  }, []);
+  });
 
   return (
     <div style={{display: 'flex', flexDirection: 'column', gap: '1.5rem'}}>
