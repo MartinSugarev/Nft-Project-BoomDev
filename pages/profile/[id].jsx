@@ -25,7 +25,7 @@ export default function Index() {
           throw(error)
         }
 
-      }, []);
+      });
 
     return (
         <div>
