@@ -14,18 +14,12 @@ export default function Index() {
   const [product, setProduct] = useState();
 
   useEffect(async () => {
-
-    console.log(process.env.apiUrl);
     
-
-    try {
       const result = await fetch(`${baseUrl}/nfts/${id}`)
       const response =  await result.json()
       
       setProduct(response)
-    } catch (error) {
-      throw(error)
-    }
+    
 
   }, []);
 
