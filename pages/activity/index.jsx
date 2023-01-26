@@ -16,15 +16,13 @@ export default function Index() {
 
     useEffect(async () => {
 
-      try {
+
         const result = await fetch(`${baseUrl}/activities`)
         const response =  await result.json()  
         
         setActivity(response.activities)
         setActivityFilters(response.filters)
-      } catch (error) {
-        throw(error)
-      }
+        
 
       });
 
@@ -32,7 +30,7 @@ export default function Index() {
         try {
           const result = await fetch(`${baseUrl}/activities?sort=${sort}`)
           const response =  await result.json()
-          setActivity(response.nfts)
+          setActivity(response.activities)
         } catch (error) {
           throw(error)
         }
@@ -43,7 +41,7 @@ export default function Index() {
         try {
           const result = await fetch(`${baseUrl}/activities?type=${type}`)
           const response =  await result.json()
-          setActivity(response.nfts)
+          setActivity(response.activities)
         } catch (error) {
           throw(error)
         }
