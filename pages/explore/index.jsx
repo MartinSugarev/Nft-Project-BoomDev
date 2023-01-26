@@ -18,13 +18,19 @@ export default function Index() {
 
 
     useEffect(async () => {
-      const result = await fetch(`${baseUrl}/explore`)
-      const response =  await result.json()
-      
-      setNfts(response.nfts)
-      setNftFilters(response.filters)
 
-    }, []);
+      try {
+        const result = await fetch(`${baseUrl}/explore`)
+        const response =  await result.json()
+        
+        setNfts(response.nfts)
+        setNftFilters(response.filters)
+      } catch (error) {
+          throw(error)
+      }
+
+
+    });
 
     useEffect(async () => {
       const result = await fetch(`${baseUrl}/explore?sort=${sort}`)
