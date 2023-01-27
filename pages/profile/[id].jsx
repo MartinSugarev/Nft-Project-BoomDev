@@ -16,7 +16,7 @@ export default function Index() {
     const [profileFilters, setProfileFilters] = useState([])
 
     useEffect(async () => {
-          const result = await fetch(`${baseUrl}/users/${id}`)
+          const result = await fetch(`${baseUrl}/users/{id}`)
           const response =  await result.json()
           
           setProfile(response.profile)

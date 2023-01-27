@@ -1,7 +1,7 @@
 import styles from './ProductContainer.module.scss';
 import { Grid, Box, Container} from '@mui/material';
 import classNames from "classnames";
-import React from 'react';
+import React, {useEffect} from 'react';
 import ProductImage from './ProductImage';
 import ProductActions from './ProductActions';
 import ProductInfo from './ProductInfo';
@@ -9,6 +9,13 @@ import ProductTabs from './ProductTabs';
 
 
 export default function ProductContainer({product}) {
+
+    useEffect(() => {
+
+        console.log(product);
+        
+       })
+
     return (
         <Container maxWidth={false} className={classNames(styles["product-container"])}>
             <Grid container spacing={6}>
